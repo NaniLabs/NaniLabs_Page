@@ -39,7 +39,7 @@ export function ProjectCard({ project, featured = false }: ProjectCardProps) {
 
   return (
     <article className={cardClass} aria-labelledby={`${project.id}-title`}>
-      {hasImage && !featured && (
+      {hasImage && (
         <div className="relative aspect-video mb-6 rounded-lg overflow-hidden bg-[var(--color-bg-elevated)]">
           <img
             src={project.image}

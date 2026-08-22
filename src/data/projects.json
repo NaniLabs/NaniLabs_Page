@@ -6,7 +6,7 @@
       "tagline": "Android ↔ Windows",
       "description": "Aplicación para conectar tu teléfono Android con Windows. Transferencia de archivos, portapapeles compartido, notificaciones y más. En beta activa.",
       "status": "Beta 0.1.3",
-      "statusColor": "warning",
+      "statusColor": "development",
       "technologies": [
         "Flutter",
         "Dart"

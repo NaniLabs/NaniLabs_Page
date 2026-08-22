@@ -10,6 +10,7 @@ export interface SiteData {
   links: {
     portfolio: string;
     doublelink: string;
+    dobre: string;
   };
   seo: {
     title: string;
