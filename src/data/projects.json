@@ -1,0 +1,47 @@
+{
+  "projects": [
+    {
+      "id": "doublelink",
+      "name": "DoubleLink",
+      "tagline": "Android ↔ Windows",
+      "description": "Aplicación para conectar tu teléfono Android con Windows. Transferencia de archivos, portapapeles compartido, notificaciones y más. En beta activa.",
+      "status": "Beta 0.1.x",
+      "statusColor": "warning",
+      "technologies": ["Kotlin", "TypeScript", "React", "WebRTC", "Node.js"],
+      "image": "/projects/doublelink.png",
+      "links": {
+        "web": "https://doublelink.nanilabs.lat",
+        "github": "https://github.com/NaniLabs/DoubleLink",
+        "download": "https://github.com/NaniLabs/DoubleLink/releases"
+      },
+      "featured": true,
+      "version": "0.1.x"
+    },
+    {
+      "id": "aquamarine",
+      "name": "Aquamarine",
+      "description": "Sistema de gestión de inventario, ventas y reparaciones desarrollado en C++ con Qt y SQLite. Pensado para negocios locales.",
+      "status": "Finalizado",
+      "statusColor": "success",
+      "technologies": ["C++", "Qt", "SQLite"],
+      "image": "/projects/aquamarine.png",
+      "links": {
+        "github": "https://github.com/NaniLabs/FreeSoft"
+      },
+      "featured": false
+    },
+    {
+      "id": "organeyes",
+      "name": "OrganEyes",
+      "description": "Aplicación para Windows que organiza automáticamente archivos según su extensión y tipo. Limpia carpetas de descargas, escritorio y más.",
+      "status": "Finalizado",
+      "statusColor": "success",
+      "technologies": ["Python", "PyQt"],
+      "image": "/projects/organeyes.png",
+      "links": {
+        "github": "https://github.com/NaniLabs/FreeSoft"
+      },
+      "featured": false
+    }
+  ]
+}

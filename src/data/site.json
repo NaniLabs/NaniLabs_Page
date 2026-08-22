@@ -1,0 +1,23 @@
+{
+  "name": "NaniLabs",
+  "tagline": "Build. Automate. Solve.",
+  "description": "NaniLabs es el espacio donde desarrollo proyectos propios, pruebo ideas, automatizo cosas y construyo herramientas que realmente uso. No es una empresa, es mi laboratorio personal de software.",
+  "email": "nani@nanilabs.lat",
+  "social": {
+    "github": "https://github.com/NaniLabs",
+    "instagram": "https://instagram.com/nanilabs"
+  },
+  "links": {
+    "portfolio": "https://ceo.nanilabs.lat",
+    "doublelink": "https://doublelink.nanilabs.lat"
+  },
+  "seo": {
+    "title": "NaniLabs — Build. Automate. Solve.",
+    "description": "Laboratorio personal de desarrollo de software. Proyectos reales: DoubleLink, Aquamarine, OrganEyes y más.",
+    "ogImage": "/og-image.png"
+  },
+  "footer": {
+    "copyright": "NaniLabs. Todos los derechos reservados.",
+    "madeBy": "Creado por Ignacio Meoniz"
+  }
+}
