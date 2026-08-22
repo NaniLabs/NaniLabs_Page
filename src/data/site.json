@@ -2,14 +2,15 @@
   "name": "NaniLabs",
   "tagline": "Build. Automate. Solve.",
   "description": "NaniLabs es el espacio donde desarrollo proyectos propios, pruebo ideas, automatizo cosas y construyo herramientas que realmente uso. No es una empresa, es mi laboratorio personal de software.",
-  "email": "nani@nanilabs.lat",
+  "email": "meonizignacioexequiel@gmail.com",
   "social": {
     "github": "https://github.com/NaniLabs",
-    "instagram": "https://instagram.com/nanilabs"
+    "instagram": "https://instagram.com/nanilabs.lat"
   },
   "links": {
     "portfolio": "https://ceo.nanilabs.lat",
-    "doublelink": "https://doublelink.nanilabs.lat"
+    "doublelink": "https://doublelink.nanilabs.lat",
+    "dobre": "https://dobre.nanilabs.lat"
   },
   "seo": {
     "title": "NaniLabs — Build. Automate. Solve.",
@@ -17,7 +18,7 @@
     "ogImage": "/og-image.png"
   },
   "footer": {
-    "copyright": "NaniLabs. Todos los derechos reservados.",
-    "madeBy": "Creado por Ignacio Meoniz"
+    "copyright": "NaniLabs. All rights reserved.",
+    "madeBy": "Created by Ignacio Meoniz"
   }
 }
