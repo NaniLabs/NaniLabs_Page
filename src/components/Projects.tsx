@@ -1,9 +1,8 @@
-import { getFeaturedProjects, getRegularProjects } from '@/utils/content'
+import { useProjects } from '@/hooks/useProjects'
 import { ProjectCard } from '@/components/ProjectCard'
 
 export function Projects() {
-  const featured = getFeaturedProjects()
-  const regular = getRegularProjects()
+  const { featuredProjects: featured, regularProjects: regular } = useProjects()
 
   return (
     <section id="proyectos" className="section" aria-labelledby="projects-title">

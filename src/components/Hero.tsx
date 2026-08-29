@@ -1,6 +1,7 @@
 import { ArrowRight, Sparkles } from 'lucide-react'
 import { cn } from '@/utils/cn'
-import { site, getFeaturedProjects } from '@/utils/content'
+import { site } from '@/utils/content'
+import { useProjects } from '@/hooks/useProjects'
 
 function GithubIcon({ className }: { className?: string }) {
   return (
@@ -21,7 +22,7 @@ function InstagramIcon({ className }: { className?: string }) {
 }
 
 export function Hero() {
-  const featuredProjects = getFeaturedProjects()
+  const { featuredProjects } = useProjects()
   const mainProject = featuredProjects[0]
 
   return (

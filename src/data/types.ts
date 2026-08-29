@@ -44,6 +44,7 @@ export interface ProjectData {
   links: ProjectLink;
   featured: boolean;
   version?: string;
+  releaseSource?: string;
 }
 
 export interface ProjectsFile {
