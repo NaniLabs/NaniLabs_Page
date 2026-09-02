@@ -30,17 +30,31 @@ function formatStatus(rawStatus?: string, version?: string): string {
   return `${cleanStatus.charAt(0).toUpperCase() + cleanStatus.slice(1)} ${version}`
 }
 
+const CACHE_KEY = 'nanilabs_projects_cache_v2'
+const CACHE_TTL_MS = 5 * 60 * 1000 // 5 minutos de TTL
+
+interface CacheEnvelope {
+  timestamp: number
+  data: ProjectData[]
+}
+
 async function fetchLiveProjects(): Promise<ProjectData[]> {
   if (cachedProjects) return cachedProjects
 
-  // Try reading from sessionStorage
+  // Try reading valid (non-expired) cache from sessionStorage
   try {
-    const sessionCached = sessionStorage.getItem('nanilabs_projects_cache')
+    const sessionCached = sessionStorage.getItem(CACHE_KEY)
     if (sessionCached) {
-      const parsed = JSON.parse(sessionCached) as ProjectData[]
-      if (Array.isArray(parsed) && parsed.length > 0) {
-        cachedProjects = parsed
-        return parsed
+      const envelope = JSON.parse(sessionCached) as CacheEnvelope
+      if (
+        envelope &&
+        typeof envelope.timestamp === 'number' &&
+        Date.now() - envelope.timestamp < CACHE_TTL_MS &&
+        Array.isArray(envelope.data) &&
+        envelope.data.length > 0
+      ) {
+        cachedProjects = envelope.data
+        return envelope.data
       }
     }
   } catch {
@@ -57,6 +71,7 @@ async function fetchLiveProjects(): Promise<ProjectData[]> {
 
         const response = await fetch(project.releaseSource, {
           signal: controller.signal,
+          cache: 'no-cache',
           headers: { Accept: 'application/json' },
         })
         clearTimeout(timeoutId)
@@ -86,7 +101,11 @@ async function fetchLiveProjects(): Promise<ProjectData[]> {
   cachedProjects = updatedProjects
 
   try {
-    sessionStorage.setItem('nanilabs_projects_cache', JSON.stringify(updatedProjects))
+    const envelope: CacheEnvelope = {
+      timestamp: Date.now(),
+      data: updatedProjects,
+    }
+    sessionStorage.setItem(CACHE_KEY, JSON.stringify(envelope))
   } catch {
     // Ignore storage write error
   }
