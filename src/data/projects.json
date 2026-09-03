@@ -3,20 +3,22 @@
     {
       "id": "doublelink",
       "name": "DoubleLink",
-      "tagline": "Android ↔ Windows",
-      "description": "Aplicación para conectar tu teléfono Android con Windows. Transferencia de archivos, portapapeles compartido, notificaciones y más. En beta activa.",
-      "status": "Beta 0.3.0",
+      "tagline": "Control Remoto & Companion (Android ↔ Windows)",
+      "description": "Suite de control remoto, integración y companion bidireccional entre Android y Windows. Screen Mirroring en vivo, cámara web para OBS, transferencia gigabit P2P, telemetría y portapapeles sin nube.",
+      "status": "Beta 1.0.0",
       "statusColor": "development",
       "technologies": [
         "Flutter",
-        "Dart"
+        "Dart",
+        "Kotlin",
+        "Win32"
       ],
       "image": "/projects/doublelink.png",
       "links": {
         "web": "https://doublelink.nanilabs.lat"
       },
       "featured": true,
-      "version": "0.3.0",
+      "version": "1.0.0",
       "releaseSource": "https://pub-e7f8fb195c3c42b59e5da4c5c345837b.r2.dev/releases.json"
     },
     {
