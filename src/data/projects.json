@@ -69,6 +69,45 @@
         "web": "https://dobre.nanilabs.lat"
       },
       "featured": true
+    },
+    {
+      "id": "family-tech-store",
+      "name": "CRM Servicio Técnico",
+      "tagline": "Tienda online y gestión de servicio técnico",
+      "description": "Sistema web desarrollado para centralizar catálogo, pedidos, stock, pagos con Mercado Pago, reparaciones, seguimiento, soporte y avisos automáticos.",
+      "status": "En producción",
+      "statusColor": "success",
+      "technologies": [
+        "TypeScript",
+        "Node.js",
+        "Mercado Pago",
+        "SQLite",
+        "Multi-tenant"
+      ],
+      "image": "/projects/family-tech-store-preview.webp",
+      "links": {
+        "web": "https://crm.saas.nanilabs.lat"
+      },
+      "featured": true
+    },
+    {
+      "id": "nanilabs-saas",
+      "name": "NaniLabs SaaS",
+      "tagline": "Sistemas Web Adaptables",
+      "description": "Sistemas SaaS y aplicaciones web adaptables al proyecto, presupuesto e infraestructura de cada negocio.",
+      "status": "Disponible",
+      "statusColor": "info",
+      "technologies": [
+        "TypeScript",
+        "React",
+        "Node.js",
+        "Tailwind CSS",
+        "Multi-tenant"
+      ],
+      "links": {
+        "web": "https://saas.nanilabs.lat"
+      },
+      "featured": false
     }
   ]
 }

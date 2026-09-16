@@ -11,6 +11,7 @@ export interface SiteData {
     portfolio: string;
     doublelink: string;
     dobre: string;
+    saas?: string;
   };
   seo: {
     title: string;
