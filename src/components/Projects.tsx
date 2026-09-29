@@ -20,6 +20,9 @@ export function Projects() {
 
         {featured.length > 0 && (
           <div className="mb-12 md:mb-16">
+            <h3 className="text-lg font-semibold text-[var(--color-text-muted)] mb-8 text-center md:text-left">
+              Proyectos destacados
+            </h3>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {featured.map((project) => (
                 <ProjectCard key={project.id} project={project} featured />

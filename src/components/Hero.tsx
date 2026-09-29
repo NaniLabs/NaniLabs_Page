@@ -23,7 +23,6 @@ function InstagramIcon({ className }: { className?: string }) {
 
 export function Hero() {
   const { featuredProjects } = useProjects()
-  const mainProject = featuredProjects[0]
 
   return (
     <section
@@ -70,57 +69,83 @@ export function Hero() {
             </a>
           </div>
 
-          {mainProject && (
+          {featuredProjects.length > 0 && (
             <div className="mt-12 animate-fade-in stagger-4">
               <p className="text-sm font-medium uppercase tracking-[0.2em] text-[var(--color-accent)] mb-4">
-                Proyecto destacado
+                {featuredProjects.length > 1 ? 'Proyectos destacados' : 'Proyecto destacado'}
               </p>
-              <div className="featured-project p-6 md:p-8 max-w-2xl mx-auto">
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-                  <div className="text-center md:text-left">
-                    <h2 className="font-display text-2xl md:text-3xl font-semibold text-[var(--color-text)] mb-2">
-                      {mainProject.name}
-                    </h2>
-                    {mainProject.tagline && (
-                      <p className="text-[var(--color-accent)] font-medium mb-3">{mainProject.tagline}</p>
-                    )}
-                    <p className="text-[var(--color-text-muted)] mb-4">{mainProject.description}</p>
-                    <div className="flex flex-wrap items-center justify-center md:justify-start gap-2 mb-4">
-                      <span className={cn('badge', `badge-${mainProject.statusColor}`)}>
-                        {mainProject.status}
+              <div
+                className={cn(
+                  'grid gap-6 mx-auto',
+                  featuredProjects.length === 1 ? 'max-w-2xl' : 'max-w-5xl md:grid-cols-2 lg:grid-cols-3'
+                )}
+              >
+                {featuredProjects.map((project) => (
+                  <div
+                    key={project.id}
+                    className="featured-project p-6 flex flex-col h-full text-left"
+                  >
+                    <div className="flex items-start justify-between gap-3 mb-2">
+                      <div>
+                        <h2 className="font-display text-xl font-semibold text-[var(--color-text)]">
+                          {project.name}
+                        </h2>
+                        {project.tagline && (
+                          <p className="text-[var(--color-accent)] font-medium text-xs mt-0.5">
+                            {project.tagline}
+                          </p>
+                        )}
+                      </div>
+                      <span className={cn('badge flex-shrink-0 text-[10px]', `badge-${project.statusColor}`)}>
+                        {project.status}
                       </span>
-                      {mainProject.version && (
-                        <span className="text-xs text-[var(--color-text-subtle)] px-2 py-1 rounded bg-[var(--color-bg-elevated)]">
-                          v{mainProject.version}
+                    </div>
+
+                    <p className="text-[var(--color-text-muted)] text-sm mb-4 line-clamp-3 flex-1">
+                      {project.description}
+                    </p>
+
+                    <div className="flex items-center justify-between gap-2 pt-3 border-t border-[var(--color-border)] mt-auto">
+                      {project.version ? (
+                        <span className="text-xs text-[var(--color-text-subtle)] px-2 py-0.5 rounded bg-[var(--color-bg-elevated)]">
+                          v{project.version}
                         </span>
+                      ) : (
+                        <span />
                       )}
+
+                      <div className="flex items-center gap-2">
+                        {project.futureDomain && (
+                          <span className="text-xs font-mono text-[var(--color-text-subtle)] border border-dashed border-[var(--color-border)] px-2 py-1 rounded bg-[var(--color-bg-elevated)]/50">
+                            {project.futureDomain}
+                          </span>
+                        )}
+                        {project.links.web && (
+                          <a
+                            href={project.links.web}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="btn btn-primary text-xs px-3 py-1.5"
+                          >
+                            <span>Ver</span>
+                            <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
+                          </a>
+                        )}
+                        {project.links.github && (
+                          <a
+                            href={project.links.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="btn btn-secondary text-xs px-2.5 py-1.5"
+                            aria-label={`Código de ${project.name}`}
+                          >
+                            <GithubIcon className="h-3.5 w-3.5" />
+                          </a>
+                        )}
+                      </div>
                     </div>
                   </div>
-                  <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
-                    {mainProject.links.web && (
-                      <a
-                        href={mainProject.links.web}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="btn btn-primary w-full sm:w-auto"
-                      >
-                        <span>Ver proyecto</span>
-                        <ArrowRight className="h-4 w-4" aria-hidden="true" />
-                      </a>
-                    )}
-                    {mainProject.links.github && (
-                      <a
-                        href={mainProject.links.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="btn btn-secondary w-full sm:w-auto"
-                      >
-                        <GithubIcon className="h-4 w-4" aria-hidden="true" />
-                        <span>Código</span>
-                      </a>
-                    )}
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
           )}

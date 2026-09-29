@@ -46,6 +46,7 @@ export interface ProjectData {
   featured: boolean;
   version?: string;
   releaseSource?: string;
+  futureDomain?: string;
 }
 
 export interface ProjectsFile {

@@ -1,4 +1,4 @@
-import { ArrowRight, ExternalLink, FileText, Play } from 'lucide-react'
+import { ArrowRight, ExternalLink, FileText, Globe, Play } from 'lucide-react'
 import { cn } from '@/utils/cn'
 import type { ProjectData } from '@/data/types'
 
@@ -94,8 +94,20 @@ export function ProjectCard({ project, featured = false }: ProjectCardProps) {
           </p>
         )}
 
-        {links.length > 0 && (
-          <div className="flex flex-wrap gap-2 pt-2 border-t border-[var(--color-border)] mt-auto">
+        {(links.length > 0 || project.futureDomain) && (
+          <div className="flex flex-wrap items-center gap-2 pt-2 border-t border-[var(--color-border)] mt-auto">
+            {project.futureDomain && (
+              <span
+                className="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg border border-dashed border-[var(--color-border)] bg-[var(--color-bg-elevated)]/50 text-xs text-[var(--color-text-subtle)] font-mono select-none"
+                title="Dominio futuro - En construcción"
+              >
+                <Globe className="h-3.5 w-3.5 text-amber-400/80" aria-hidden="true" />
+                <span>{project.futureDomain}</span>
+                <span className="text-[10px] uppercase font-sans tracking-wide text-amber-400 font-medium ml-1">
+                  (Próximamente)
+                </span>
+              </span>
+            )}
             {links.map((link) => (
               <a
                 key={link.key}
