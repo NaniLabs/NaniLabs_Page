@@ -4,8 +4,8 @@
       "id": "doublelink",
       "name": "DoubleLink",
       "tagline": "Control Remoto & Companion (Android ↔ Windows)",
-      "description": "Suite de control remoto, ecosistema multidispositivo y companion bidireccional entre Android y Windows. PC Windows como Router Hub, cámara web para OBS, transferencia gigabit P2P, nuevo Edge Panel Obsidian Glass simétrico e icon-only y portapapeles sin nube.",
-      "status": "Beta 2.2.0",
+      "description": "Suite de control remoto, ecosistema multidispositivo y companion bidireccional entre Android y Windows. PC Windows como Router Hub, envío multi-archivo simultáneo, Wake-on-LAN programable, macros Stream Deck, cámara web para OBS y portapapeles sin nube.",
+      "status": "Beta 2.3.0",
       "statusColor": "development",
       "technologies": [
         "Flutter",
@@ -18,7 +18,7 @@
         "web": "https://doublelink.nanilabs.lat"
       },
       "featured": true,
-      "version": "2.2.0",
+      "version": "2.3.0",
       "releaseSource": "https://pub-e7f8fb195c3c42b59e5da4c5c345837b.r2.dev/releases.json"
     },
     {
