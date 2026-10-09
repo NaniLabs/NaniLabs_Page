@@ -1,7 +1,6 @@
-import { ArrowRight, Sparkles } from 'lucide-react'
-import { cn } from '@/utils/cn'
+import { useState } from 'react'
+import { ArrowRight, Terminal, ExternalLink, ShieldCheck, Cpu, Wifi } from 'lucide-react'
 import { site } from '@/utils/content'
-import { useProjects } from '@/hooks/useProjects'
 
 function GithubIcon({ className }: { className?: string }) {
   return (
@@ -22,164 +21,300 @@ function InstagramIcon({ className }: { className?: string }) {
 }
 
 export function Hero() {
-  const { featuredProjects } = useProjects()
+  const [activeProjectKey, setActiveProjectKey] = useState<string>('doublelink')
+
+  const consoleSystems = [
+    {
+      key: 'doublelink',
+      name: 'DoubleLink',
+      version: 'v2.3.1',
+      badge: 'BETA LAN',
+      protocol: 'P2P WS // 8080',
+      stack: ['Flutter', 'Dart', 'WebSocket', 'Win32'],
+      summary: 'Ecosistema de control y transferencia bidireccional local entre Android y Windows sin servidores intermedios.',
+      link: 'https://doublelink.nanilabs.lat',
+      telemetry: 'LATENCIA: < 2ms · CIFRADO: LAN PRIVADA'
+    },
+    {
+      key: 'nanilabs-saas',
+      name: 'NaniLabs SaaS',
+      version: 'v1.0',
+      badge: 'PRODUCCIÓN',
+      protocol: 'EDGE D1 // 443',
+      stack: ['Next.js', 'Cloudflare Workers', 'D1', 'Mercado Pago'],
+      summary: 'Arquitectura comercial multi-tenant para inventario, reparaciones, órdenes de trabajo y cobros integrados.',
+      link: 'https://saas.nanilabs.lat',
+      telemetry: 'UPTIME: 99.98% · RUNTIME: WORKERS V8'
+    },
+    {
+      key: 'dobre',
+      name: 'DoBre',
+      version: 'v1.0',
+      badge: 'PRODUCCIÓN',
+      protocol: 'CALC // ML API',
+      stack: ['Vite', 'React', 'Tailwind', 'Cloudflare'],
+      summary: 'Motor de cálculo de rentabilidad y comisiones en Mercado Libre para optimización de precios reales.',
+      link: 'https://dobre.nanilabs.lat',
+      telemetry: 'RESOLUCIÓN: DETERMINISTA · CLIENT-SIDE'
+    },
+    {
+      key: 'organeyes',
+      name: 'OrganEyes',
+      version: 'v1.2',
+      badge: 'UTILIDAD',
+      protocol: 'WIN_CLI // LOCAL',
+      stack: ['C++', 'Qt', 'Win32 IO'],
+      summary: 'Utilidad nativa para Windows de clasificación heurística automatizada y ordenamiento masivo de archivos.',
+      link: 'https://github.com/NaniLabs/FreeSoft',
+      telemetry: 'EJECUCIÓN: ZERO MEMORY OVERHEAD'
+    }
+  ]
+
+  const currentSys = consoleSystems.find(s => s.key === activeProjectKey) || consoleSystems[0]
 
   return (
     <section
       id="inicio"
-      className="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden"
+      className="relative min-h-[90vh] flex items-center pt-24 pb-16 overflow-hidden bg-[var(--color-bg)]"
       aria-labelledby="hero-title"
     >
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-10%,rgba(6,182,212,0.08),transparent_60%),radial-gradient(ellipse_60%_40%_at_100%_100%,rgba(168,85,247,0.05),transparent_50%)]" aria-hidden="true" />
+      {/* Dynamic ambient background mesh */}
+      <div 
+        className="absolute inset-0 bg-[radial-gradient(ellipse_70%_50%_at_25%_20%,rgba(6,182,212,0.12),transparent_70%),radial-gradient(ellipse_60%_40%_at_80%_80%,rgba(99,102,241,0.08),transparent_60%)] pointer-events-none" 
+        aria-hidden="true" 
+      />
+      <div 
+        className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_40%,#000_70%,transparent_100%)] pointer-events-none" 
+        aria-hidden="true"
+      />
 
-      <div className="container relative z-10 py-12 md:py-20">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 rounded-full border border-[var(--color-accent)]/30 bg-[var(--color-accent)]/10 px-4 py-2 text-sm font-medium text-[var(--color-accent)] mb-8 animate-fade-in">
-            <Sparkles className="h-4 w-4" aria-hidden="true" />
-            <span>{site.tagline}</span>
-          </div>
+      <div className="container relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+          
+          {/* Column 1: Technical proposition & Brand Identity (7 cols) */}
+          <div className="lg:col-span-7 text-left space-y-6">
+            
+            {/* Status Kicker */}
+            <div className="inline-flex items-center gap-2.5 rounded-full border border-[var(--color-accent)]/30 bg-[var(--color-accent)]/10 px-3.5 py-1.5 text-xs font-mono text-[var(--color-accent)]">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-500" />
+              </span>
+              <span>SYS.ACTIVE // REGION: AR-BUE // LAB_V2.4</span>
+            </div>
 
-          <h1
-            id="hero-title"
-            className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-[var(--color-text)] mb-6 animate-fade-in stagger-1"
-          >
-            {site.name}
-          </h1>
-
-          <p className="text-lg md:text-xl text-[var(--color-text-muted)] mb-10 max-w-2xl mx-auto animate-fade-in stagger-2 leading-relaxed">
-            {site.description}
-          </p>
-
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in stagger-3">
-            <a
-              href="#proyectos"
-              className="btn btn-primary w-full sm:w-auto"
+            {/* Main Headline */}
+            <h1
+              id="hero-title"
+              className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[var(--color-text)] leading-[1.08]"
             >
-              <span>Ver proyectos</span>
-              <ArrowRight className="h-4 w-4" aria-hidden="true" />
-            </a>
-            <a
-              href={site.links.portfolio}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-secondary w-full sm:w-auto"
-            >
-              <span>Portfolio personal</span>
-              <ArrowRight className="h-4 w-4" aria-hidden="true" />
-            </a>
-          </div>
+              Ingeniería de software <br />
+              <span className="bg-gradient-to-r from-cyan-400 via-teal-300 to-indigo-400 bg-clip-text text-transparent">
+                práctica y descentralizada.
+              </span>
+            </h1>
 
-          {featuredProjects.length > 0 && (
-            <div className="mt-12 animate-fade-in stagger-4">
-              <p className="text-sm font-medium uppercase tracking-[0.2em] text-[var(--color-accent)] mb-4">
-                {featuredProjects.length > 1 ? 'Proyectos destacados' : 'Proyecto destacado'}
-              </p>
-              <div
-                className={cn(
-                  'grid gap-6 mx-auto',
-                  featuredProjects.length === 1 ? 'max-w-2xl' : 'max-w-5xl md:grid-cols-2 lg:grid-cols-3'
-                )}
+            {/* Description */}
+            <p className="text-base sm:text-lg text-[var(--color-text-muted)] max-w-xl leading-relaxed">
+              Laboratorio independiente de desarrollo enfocado en utilidades P2P de red local, sistemas web comerciales serverless sobre Cloudflare y optimización de flujos operativos sin dependencias corporativas innecesarias.
+            </p>
+
+            {/* CTAs */}
+            <div className="flex flex-wrap items-center gap-4 pt-2">
+              <a
+                href="#proyectos"
+                className="btn btn-primary inline-flex items-center gap-2 px-5 py-3 shadow-[var(--shadow-glow)]"
               >
-                {featuredProjects.map((project) => (
-                  <div
-                    key={project.id}
-                    className="featured-project p-6 flex flex-col h-full text-left"
-                  >
-                    <div className="flex items-start justify-between gap-3 mb-2">
-                      <div>
-                        <h2 className="font-display text-xl font-semibold text-[var(--color-text)]">
-                          {project.name}
-                        </h2>
-                        {project.tagline && (
-                          <p className="text-[var(--color-accent)] font-medium text-xs mt-0.5">
-                            {project.tagline}
-                          </p>
-                        )}
-                      </div>
-                      <span className={cn('badge flex-shrink-0 text-[10px]', `badge-${project.statusColor}`)}>
-                        {project.status}
-                      </span>
-                    </div>
+                <span>Explorar proyectos</span>
+                <ArrowRight className="h-4 w-4" aria-hidden="true" />
+              </a>
 
-                    <p className="text-[var(--color-text-muted)] text-sm mb-4 line-clamp-3 flex-1">
-                      {project.description}
-                    </p>
+              <a
+                href="https://saas.nanilabs.lat"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-secondary inline-flex items-center gap-2 px-5 py-3 border border-[var(--color-border)] hover:border-[var(--color-accent)]/50"
+              >
+                <span>NaniLabs SaaS</span>
+                <ExternalLink className="h-4 w-4 text-[var(--color-accent)]" aria-hidden="true" />
+              </a>
 
-                    <div className="flex items-center justify-between gap-2 pt-3 border-t border-[var(--color-border)] mt-auto">
-                      {project.version ? (
-                        <span className="text-xs text-[var(--color-text-subtle)] px-2 py-0.5 rounded bg-[var(--color-bg-elevated)]">
-                          v{project.version}
-                        </span>
-                      ) : (
-                        <span />
-                      )}
+              <a
+                href={site.links.portfolio}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-sm font-medium text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors px-3 py-2"
+              >
+                <span>Portfolio fundador</span>
+                <span className="text-xs text-[var(--color-accent)]">↗</span>
+              </a>
+            </div>
 
-                      <div className="flex items-center gap-2">
-                        {project.futureDomain && (
-                          <span className="text-xs font-mono text-[var(--color-text-subtle)] border border-dashed border-[var(--color-border)] px-2 py-1 rounded bg-[var(--color-bg-elevated)]/50">
-                            {project.futureDomain}
-                          </span>
-                        )}
-                        {project.links.web && (
-                          <a
-                            href={project.links.web}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="btn btn-primary text-xs px-3 py-1.5"
-                          >
-                            <span>Ver</span>
-                            <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
-                          </a>
-                        )}
-                        {project.links.github && (
-                          <a
-                            href={project.links.github}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="btn btn-secondary text-xs px-2.5 py-1.5"
-                            aria-label={`Código de ${project.name}`}
-                          >
-                            <GithubIcon className="h-3.5 w-3.5" />
-                          </a>
-                        )}
-                      </div>
-                    </div>
-                  </div>
-                ))}
+            {/* Live Technical Metrics Ribbon */}
+            <div className="pt-6 border-t border-[var(--color-border)]/60 grid grid-cols-3 gap-4 max-w-lg">
+              <div className="flex items-center gap-2">
+                <Wifi className="h-4 w-4 text-[var(--color-accent)] shrink-0" />
+                <div className="text-xs">
+                  <div className="font-semibold text-[var(--color-text)]">P2P Local</div>
+                  <div className="text-[var(--color-text-subtle)] font-mono text-[11px]">Zero Cloud Relay</div>
+                </div>
+              </div>
+              <div className="flex items-center gap-2">
+                <Cpu className="h-4 w-4 text-emerald-400 shrink-0" />
+                <div className="text-xs">
+                  <div className="font-semibold text-[var(--color-text)]">Edge Workers</div>
+                  <div className="text-[var(--color-text-subtle)] font-mono text-[11px]">Latency &lt; 15ms</div>
+                </div>
+              </div>
+              <div className="flex items-center gap-2">
+                <ShieldCheck className="h-4 w-4 text-indigo-400 shrink-0" />
+                <div className="text-xs">
+                  <div className="font-semibold text-[var(--color-text)]">Datos Aislados</div>
+                  <div className="text-[var(--color-text-subtle)] font-mono text-[11px]">SQLite D1 Engine</div>
+                </div>
               </div>
             </div>
-          )}
+
+          </div>
+
+          {/* Column 2: Interactive Laboratory Telemetry Console (5 cols) */}
+          <div className="lg:col-span-5">
+            <div className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg-card)]/90 backdrop-blur-xl shadow-2xl overflow-hidden transition-all duration-300 hover:border-[var(--color-accent)]/40 hover:shadow-[0_0_30px_rgba(6,182,212,0.12)]">
+              
+              {/* Terminal Window Header */}
+              <div className="px-4 py-3 bg-[var(--color-bg-elevated)] border-b border-[var(--color-border)] flex items-center justify-between">
+                <div className="flex items-center gap-2">
+                  <span className="h-3 w-3 rounded-full bg-rose-500/80 inline-block" />
+                  <span className="h-3 w-3 rounded-full bg-amber-500/80 inline-block" />
+                  <span className="h-3 w-3 rounded-full bg-emerald-500/80 inline-block" />
+                  <span className="ml-2 font-mono text-xs text-[var(--color-text-muted)] flex items-center gap-1.5">
+                    <Terminal className="h-3.5 w-3.5 text-[var(--color-accent)]" />
+                    nanilabs-kernel::telemetry
+                  </span>
+                </div>
+                <span className="font-mono text-[11px] text-emerald-400 flex items-center gap-1 bg-emerald-500/10 px-2 py-0.5 rounded">
+                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                  ONLINE
+                </span>
+              </div>
+
+              {/* Console System Switcher Tabs */}
+              <div className="grid grid-cols-4 border-b border-[var(--color-border)] text-xs font-mono bg-[var(--color-bg)]/50">
+                {consoleSystems.map((sys) => (
+                  <button
+                    key={sys.key}
+                    onClick={() => setActiveProjectKey(sys.key)}
+                    className={`py-2 px-1 text-center transition-all truncate border-b-2 ${
+                      activeProjectKey === sys.key
+                        ? 'border-[var(--color-accent)] text-[var(--color-accent)] bg-[var(--color-accent)]/5 font-semibold'
+                        : 'border-transparent text-[var(--color-text-muted)] hover:text-[var(--color-text)] hover:bg-white/5'
+                    }`}
+                  >
+                    {sys.name}
+                  </button>
+                ))}
+              </div>
+
+              {/* Console Body */}
+              <div className="p-5 space-y-4 text-left font-mono">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <span className="font-display font-semibold text-lg text-[var(--color-text)]">
+                      {currentSys.name}
+                    </span>
+                    <span className="text-xs px-2 py-0.5 rounded bg-[var(--color-bg-elevated)] text-[var(--color-text-subtle)] border border-[var(--color-border)]">
+                      {currentSys.version}
+                    </span>
+                  </div>
+                  <span className="text-[10px] font-semibold tracking-wider uppercase px-2 py-0.5 rounded bg-[var(--color-accent)]/10 text-[var(--color-accent)] border border-[var(--color-accent)]/20">
+                    {currentSys.badge}
+                  </span>
+                </div>
+
+                <p className="text-xs font-sans text-[var(--color-text-muted)] leading-relaxed">
+                  {currentSys.summary}
+                </p>
+
+                {/* Tech Stack Pills */}
+                <div className="flex flex-wrap gap-1.5 pt-1">
+                  {currentSys.stack.map((tech) => (
+                    <span
+                      key={tech}
+                      className="text-[11px] font-mono px-2 py-0.5 rounded bg-[var(--color-bg-elevated)] text-[var(--color-text-muted)] border border-[var(--color-border)]"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+
+                {/* Simulated Telemetry Readout */}
+                <div className="p-3 rounded-lg bg-[var(--color-bg)] border border-[var(--color-border)] text-[11px] text-[var(--color-text-subtle)] space-y-1">
+                  <div className="flex justify-between">
+                    <span className="text-[var(--color-text-muted)]">ENDPOINT:</span>
+                    <span className="text-cyan-400">{currentSys.protocol}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-[var(--color-text-muted)]">ESTADO:</span>
+                    <span className="text-emerald-400">{currentSys.telemetry}</span>
+                  </div>
+                </div>
+
+                {/* Direct Action Link */}
+                <div className="pt-2">
+                  <a
+                    href={currentSys.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full btn btn-primary text-xs py-2.5 inline-flex items-center justify-center gap-2"
+                  >
+                    <span>Lanzar {currentSys.name}</span>
+                    <ExternalLink className="h-3.5 w-3.5" />
+                  </a>
+                </div>
+
+              </div>
+
+              {/* Console Status Bar */}
+              <div className="px-4 py-2 bg-[var(--color-bg)]/80 border-t border-[var(--color-border)] text-[10px] font-mono text-[var(--color-text-subtle)] flex justify-between items-center">
+                <span>LAB_ID: NANILABS-CORE</span>
+                <span>SEC_VERIFIED // NO_TRACKING</span>
+              </div>
+
+            </div>
+          </div>
+
         </div>
 
-        <div className="mt-16 animate-fade-in stagger-5">
-          <div className="flex items-center justify-center gap-8 text-[var(--color-text-subtle)]">
+        {/* Channels ribbon */}
+        <div className="mt-16 pt-8 border-t border-[var(--color-border)]/40 flex flex-wrap items-center justify-between gap-4 text-xs font-mono text-[var(--color-text-subtle)]">
+          <div className="flex items-center gap-6">
+            <span className="text-[var(--color-text-muted)] font-semibold">CANALES OFICIALES:</span>
             <a
               href={site.social.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-sm hover:text-[var(--color-accent)] transition-colors"
-              aria-label="GitHub"
+              className="hover:text-[var(--color-accent)] transition-colors flex items-center gap-1.5"
             >
-              <GithubIcon className="h-5 w-5" />
-              <span>GitHub</span>
+              <GithubIcon className="h-4 w-4" />
+              <span>github.com/NaniLabs</span>
             </a>
-            <span className="h-4 w-px bg-[var(--color-border)]" aria-hidden="true" />
             <a
               href={site.social.instagram}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-sm hover:text-[var(--color-accent)] transition-colors"
-              aria-label="Instagram"
+              className="hover:text-[var(--color-accent)] transition-colors flex items-center gap-1.5"
             >
-              <InstagramIcon className="h-5 w-5" />
-              <span>Instagram</span>
+              <InstagramIcon className="h-4 w-4" />
+              <span>@nanilabs.lat</span>
             </a>
           </div>
-        </div>
-      </div>
 
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce" aria-hidden="true">
-        <ArrowRight className="h-6 w-6 text-[var(--color-text-subtle)]" />
+          <div className="flex items-center gap-2">
+            <span className="inline-block h-2 w-2 rounded-full bg-cyan-400" />
+            <span>ARQUITECTURA DISTRIBUIDA EN CLOUDFLARE EDGE</span>
+          </div>
+        </div>
+
       </div>
     </section>
   )
