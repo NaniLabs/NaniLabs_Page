@@ -5,32 +5,26 @@ export function About() {
         <header className="section-header mb-12 md:mb-16">
           <span className="section-label">Sobre NaniLabs</span>
           <h2 id="about-title" className="section-title">
-            ¿Qué es NaniLabs?
+            Laboratorio de Ingeniería de Software
           </h2>
         </header>
 
         <div className="max-w-3xl mx-auto space-y-6 text-center md:text-left">
           <p className="text-lg text-[var(--color-text-muted)] leading-relaxed">
-            NaniLabs no es una empresa. No tiene empleados, no tiene oficina, no vende servicios.
+            NaniLabs es un laboratorio independiente de ingeniería de software fundado por Ignacio Exequiel Meoniz. Un espacio de creación tecnológica donde se conciben, programan y mantienen herramientas de alta utilidad práctica.
           </p>
 
           <p className="text-lg text-[var(--color-text-muted)] leading-relaxed">
-            Es el nombre que le di a mi espacio personal de desarrollo. Aquí es donde construyo
-            las herramientas que necesito, pruebo ideas que me parecen interesantes y automatizo
-            tareas que me resultan tediosas.
+            El portafolio incluye aplicaciones multiplataforma P2P como <strong className="text-[var(--color-text)]">DoubleLink</strong>, herramientas de cálculo financiero inverso como <strong className="text-[var(--color-text)]">DoBre</strong>, utilidades de escritorio como <strong className="text-[var(--color-text)]">OrganEyes</strong> y <strong className="text-[var(--color-text)]">Aquamarine</strong>, y plataformas web comerciales multi-tenant de alto rendimiento sobre arquitectura serverless en Cloudflare.
           </p>
 
           <p className="text-lg text-[var(--color-text-muted)] leading-relaxed">
-            Cada proyecto nace de una necesidad real: quería pasar archivos entre Android y
-            Windows sin cables (<strong className="text-[var(--color-text)]">DoubleLink</strong>),
-            necesitaba organizar mi carpeta de descargas (<strong className="text-[var(--color-text)]">OrganEyes</strong>),
-            un amigo pedía un sistema para su negocio (<strong className="text-[var(--color-text)]">Aquamarine</strong>).
+            Cada proyecto surge de una necesidad técnica verificable: transferencia de archivos entre Android y Windows sin dependencia de nube, cálculo inverso de comisiones para vendedores de Mercado Libre, gestión de inventario y reparaciones para comercios locales, y sistemas SaaS adaptables con trazabilidad completa.
           </p>
 
           <div className="pt-4 border-t border-[var(--color-border)]">
             <p className="text-[var(--color-text-subtle)]">
-              No hay roadmap público, no hay fechas prometidas, no hay marketing.
-              Solo código que funciona (la mayoría de las veces).
+              Enfoque técnico: función sobre espectáculo, honestidad y verificabilidad, jerarquía asimétrica y estética dark-first con elevación gradual.
             </p>
           </div>
         </div>

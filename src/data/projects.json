@@ -92,21 +92,24 @@
     },
     {
       "id": "nanilabs-saas",
-      "name": "NaniSaaS",
-      "tagline": "Sistemas Web Adaptables",
-      "description": "Sistemas SaaS y aplicaciones web adaptables al proyecto, presupuesto e infraestructura de cada negocio.",
-      "status": "En construcción",
-      "statusColor": "warning",
+      "name": "NaniLabs SaaS",
+      "tagline": "Plataforma Comercial Multi-Tenant",
+      "description": "Plataforma comercial y multi-tenant de alto rendimiento sobre arquitectura serverless en Cloudflare. Sistemas SaaS y aplicaciones web adaptables al proyecto, presupuesto e infraestructura de cada negocio.",
+      "status": "En producción",
+      "statusColor": "success",
       "technologies": [
         "TypeScript",
         "React",
         "Node.js",
         "Tailwind CSS",
-        "Multi-tenant"
+        "Multi-tenant",
+        "Cloudflare Workers",
+        "Cloudflare D1"
       ],
       "image": "/projects/nanilabs-saas.png",
-      "futureDomain": "nanisaas.ar",
-      "links": {},
+      "links": {
+        "web": "https://saas.nanilabs.lat"
+      },
       "featured": true
     }
   ]

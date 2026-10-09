@@ -1,7 +1,7 @@
 {
   "name": "NaniLabs",
   "tagline": "Build. Automate. Solve.",
-  "description": "NaniLabs es el espacio donde desarrollo proyectos propios, pruebo ideas, automatizo cosas y construyo herramientas que realmente uso. No es una empresa, es mi laboratorio personal de software.",
+  "description": "NaniLabs es un laboratorio independiente de ingeniería de software enfocado en crear herramientas prácticas y sistemas web a medida. Desarrollamos aplicaciones multiplataforma P2P, herramientas de cálculo financiero, utilidades de escritorio y plataformas comerciales multi-tenant sobre arquitectura serverless en Cloudflare.",
   "email": "meonizignacioexequiel@gmail.com",
   "social": {
     "github": "https://github.com/NaniLabs",
@@ -15,7 +15,7 @@
   },
   "seo": {
     "title": "NaniLabs — Build. Automate. Solve.",
-    "description": "Laboratorio personal de desarrollo de software. Proyectos reales: DoubleLink, Aquamarine, OrganEyes y más.",
+    "description": "Laboratorio independiente de ingeniería de software. Proyectos reales: DoubleLink, Aquamarine, OrganEyes, DoBre, NaniLabs SaaS y CRM Servicio Técnico.",
     "ogImage": "/og-image.png"
   },
   "footer": {
