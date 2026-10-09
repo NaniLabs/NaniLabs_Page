@@ -24,7 +24,7 @@ export function About() {
 
           <div className="pt-4 border-t border-[var(--color-border)]">
             <p className="text-[var(--color-text-subtle)]">
-              Enfoque técnico: función sobre espectáculo, honestidad y verificabilidad, jerarquía asimétrica y estética dark-first con elevación gradual.
+              Cada interfaz prioriza la claridad operativa: versiones exactas, dependencias reales, datos verificables y enlaces a código fuente funcional.
             </p>
           </div>
         </div>
