@@ -1,18 +1,4 @@
 import { getAllProjects } from '@/utils/content'
-import { cn } from '@/utils/cn'
-
-const techIcons: Record<string, string> = {
-  Kotlin: '🤖',
-  TypeScript: '📘',
-  React: '⚛️',
-  WebRTC: '🔗',
-  'Node.js': '🟢',
-  'C++': '⚙️',
-  Qt: '🖥️',
-  SQLite: '🗄️',
-  Python: '🐍',
-  PyQt: '🖥️',
-}
 
 export function TechStack() {
   const projects = getAllProjects()
@@ -23,7 +9,7 @@ export function TechStack() {
   const sortedTechs = Array.from(allTechs).sort()
 
   return (
-    <section id="tecnologias" className="section" aria-labelledby="tech-title">
+    <section id="tecnologias" className="section bg-[var(--color-bg-elevated)]" aria-labelledby="tech-title">
       <div className="container">
         <header className="section-header mb-12 md:mb-16">
           <span className="section-label">Tecnologías</span>
@@ -40,12 +26,8 @@ export function TechStack() {
           {sortedTechs.map((tech) => (
             <span
               key={tech}
-              className={cn(
-                'tech-tag flex items-center gap-1.5',
-                techIcons[tech] && 'cursor-default'
-              )}
+              className="tech-tag"
             >
-              {techIcons[tech] && <span aria-hidden="true">{techIcons[tech]}</span>}
               {tech}
             </span>
           ))}

@@ -1,5 +1,4 @@
 import { Mail, MessageSquare } from 'lucide-react'
-import { cn } from '@/utils/cn'
 import { site } from '@/utils/content'
 
 function GithubIcon({ className }: { className?: string }) {
@@ -33,70 +32,73 @@ export function Contact() {
     {
       label: 'Email',
       href: `mailto:${site.email}`,
-      icon: <Mail className="h-6 w-6" aria-hidden="true" />,
-      description: 'Para consultas, errores o sugerencias',
+      icon: <Mail className="h-5 w-5" aria-hidden="true" />,
+      description: 'Consultas, errores o sugerencias',
     },
     {
       label: 'GitHub',
       href: site.social.github,
-      icon: <GithubIcon className="h-6 w-6" />,
+      icon: <GithubIcon className="h-5 w-5" />,
       description: 'Issues, PRs y código abierto',
       external: true,
     },
     {
       label: 'Instagram',
       href: site.social.instagram,
-      icon: <InstagramIcon className="h-6 w-6" />,
+      icon: <InstagramIcon className="h-5 w-5" />,
       description: 'Actualizaciones y behind-the-scenes',
       external: true,
     },
     {
       label: 'Portfolio personal',
       href: site.links.portfolio,
-      icon: <MessageSquare className="h-6 w-6" aria-hidden="true" />,
-      description: 'Para propuestas profesionales',
+      icon: <MessageSquare className="h-5 w-5" aria-hidden="true" />,
+      description: 'Propuestas profesionales',
       external: true,
     },
   ]
 
   return (
-    <section id="contacto" className="section bg-[var(--color-bg-elevated)]" aria-labelledby="contact-title">
+    <section id="contacto" className="section bg-[var(--color-bg)]" aria-labelledby="contact-title">
       <div className="container">
         <header className="section-header mb-12 md:mb-16">
-          <span className="section-label">CONTACTO // CANALES DIRECTOS</span>
+          <span className="section-label">Contacto</span>
           <h2 id="contact-title" className="section-title">
-            Contacto y Comunicación
+            Canales Directos
           </h2>
           <p className="section-description">
             Canales directos para consultas técnicas, proyectos de software o colaboración en código abierto.
           </p>
         </header>
 
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4 max-w-4xl mx-auto">
+        <ul className="max-w-2xl mx-auto divide-y divide-[var(--color-border)] border-t border-[var(--color-border)]">
           {contactLinks.map((item) => (
-            <a
-              key={item.label}
-              href={item.href}
-              target={item.external ? '_blank' : undefined}
-              rel={item.external ? 'noopener noreferrer' : undefined}
-              className={cn(
-                'card p-6 text-center transition-all duration-300',
-                'hover:border-[var(--color-accent)] hover:shadow-[var(--shadow-glow)]'
-              )}
-              aria-label={`${item.label}: ${item.description}`}
-            >
-              <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--color-accent)]/10 text-[var(--color-accent)] mb-4 mx-auto">
-                {item.icon}
-              </div>
-              <h3 className="font-display text-lg font-semibold text-[var(--color-text)] mb-1">
-                {item.label}
-              </h3>
-              <p className="text-sm text-[var(--color-text-muted)]">
-                {item.description}
-              </p>
-            </a>
+            <li key={item.label}>
+              <a
+                href={item.href}
+                target={item.external ? '_blank' : undefined}
+                rel={item.external ? 'noopener noreferrer' : undefined}
+                className="flex items-center gap-4 py-5 px-2 group hover:bg-white/[0.02] transition-colors"
+                aria-label={`${item.label}: ${item.description}`}
+              >
+                <span className="text-[var(--color-text-subtle)] group-hover:text-[var(--color-accent)] transition-colors shrink-0">
+                  {item.icon}
+                </span>
+                <div className="flex-1 min-w-0">
+                  <span className="font-display font-semibold text-[var(--color-text)] group-hover:text-[var(--color-accent)] transition-colors">
+                    {item.label}
+                  </span>
+                  <span className="block text-sm text-[var(--color-text-muted)] mt-0.5">
+                    {item.description}
+                  </span>
+                </div>
+                <span className="text-xs font-mono text-[var(--color-text-subtle)] truncate hidden sm:block">
+                  {item.href.replace(/^https?:\/\//, '').replace(/^mailto:/, '')}
+                </span>
+              </a>
+            </li>
           ))}
-        </div>
+        </ul>
 
         <div className="mt-12 text-center">
           <p className="text-[var(--color-text-subtle)] text-xs font-mono">

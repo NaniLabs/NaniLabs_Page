@@ -54,8 +54,8 @@ export function Navbar() {
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
         scrolled
-          ? 'bg-[#09090b]/90 backdrop-blur-xl border-b border-[var(--color-border)] shadow-lg'
-          : 'bg-[#09090b]/40 backdrop-blur-md border-b border-white/5'
+          ? 'bg-[var(--color-bg)]/90 backdrop-blur-xl border-b border-[var(--color-border)] shadow-lg'
+          : 'bg-[var(--color-bg)]/40 backdrop-blur-md border-b border-white/5'
       )}
       role="banner"
     >
@@ -69,7 +69,7 @@ export function Navbar() {
               className="flex items-center gap-2.5 font-display text-xl font-bold tracking-tight text-[var(--color-text)] focus-ring-visible rounded-md px-1 py-1 -ml-1 group"
               aria-label={`${site.name} - Inicio`}
             >
-              <div className="h-8 w-8 rounded-lg bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 group-hover:border-cyan-400 transition-colors shadow-[0_0_12px_rgba(6,182,212,0.2)]">
+              <div className="h-8 w-8 rounded-lg bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 group-hover:border-cyan-400 transition-colors">
                 <NaniLabsMark className="h-5 w-5" />
               </div>
               <span>NaniLabs</span>
@@ -82,7 +82,7 @@ export function Navbar() {
               <a
                 key={item.id}
                 href={`#${item.id}`}
-                className="text-xs font-mono uppercase tracking-wider text-[var(--color-text-muted)] transition-colors hover:text-[var(--color-text)] hover:text-cyan-400 px-2 py-1"
+                className="text-xs font-mono uppercase tracking-wider text-[var(--color-text-muted)] transition-colors hover:text-[var(--color-text)] px-2 py-1"
               >
                 {item.label}
               </a>
@@ -138,7 +138,7 @@ export function Navbar() {
 
         {/* Mobile menu dropdown */}
         {open && (
-          <div id="mobile-menu" className="md:hidden py-4 border-t border-[var(--color-border)] bg-[#09090b]">
+          <div id="mobile-menu" className="md:hidden py-4 border-t border-[var(--color-border)] bg-[var(--color-bg)]">
             <div className="flex flex-col gap-3 font-mono text-sm">
               {navItems.map((item) => (
                 <a

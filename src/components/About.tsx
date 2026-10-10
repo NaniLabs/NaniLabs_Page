@@ -1,41 +1,36 @@
-import { Shield, Zap, Wrench, Terminal, ArrowUpRight } from 'lucide-react'
+import { ArrowUpRight } from 'lucide-react'
 
 export function About() {
   const principles = [
     {
-      icon: <Shield className="h-5 w-5 text-cyan-400" />,
       title: 'Red Local y Privacidad',
       desc: 'Herramientas locales primero. DoubleLink comunica dispositivos en la red LAN sin transmitir datos a servidores externos ni almacenar perfiles.'
     },
     {
-      icon: <Zap className="h-5 w-5 text-emerald-400" />,
       title: 'Arquitectura Serverless en Edge',
       desc: 'Infraestructura web distribuida sobre Cloudflare Workers y D1 SQLite, optimizando recursos y tiempos de respuesta sin servidores dedicados tradicionales.'
     },
     {
-      icon: <Wrench className="h-5 w-5 text-indigo-400" />,
       title: 'Utilidad Práctica',
       desc: 'Cada proyecto resuelve un problema operativo concreto: sincronización de dispositivos, cálculo financiero de comisiones o administración de stock.'
     },
     {
-      icon: <Terminal className="h-5 w-5 text-amber-400" />,
       title: 'Código Abierto e Independiente',
       desc: 'Software verificable, interfaces directas sin patrones oscuros ni suscripciones invasivas, y documentación técnica accesible para la comunidad.'
     }
   ]
 
   return (
-    <section id="sobre" className="section relative bg-[var(--color-bg-elevated)] py-20 border-y border-[var(--color-border)]" aria-labelledby="about-title">
+    <section id="sobre" className="section relative bg-[var(--color-bg)] py-20" aria-labelledby="about-title">
       <div className="container">
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           
           {/* Left Column: Lab Narrative */}
           <div className="lg:col-span-5 text-left space-y-6">
-            <div className="inline-flex items-center gap-2 text-xs font-mono text-[var(--color-accent)] tracking-wider uppercase">
-              <span className="h-1.5 w-1.5 rounded-full bg-cyan-400" />
-              <span>LABORATORIO // IDENTIDAD & PRINCIPIOS</span>
-            </div>
+            <p className="text-xs font-mono uppercase tracking-widest text-[var(--color-text-subtle)]">
+              Laboratorio // Identidad &amp; Principios
+            </p>
 
             <h2 id="about-title" className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-[var(--color-text)]">
               Desarrollo de software impulsado por la utilidad real.
@@ -62,26 +57,20 @@ export function About() {
             </div>
           </div>
 
-          {/* Right Column: 4 Engineering Pillars in Zinc Cards */}
-          <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {principles.map((p, idx) => (
-              <div
-                key={idx}
-                className="p-6 rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-card)] hover:border-[var(--color-accent)]/40 transition-all duration-300 flex flex-col justify-between"
-              >
-                <div>
-                  <div className="h-10 w-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center mb-4">
-                    {p.icon}
-                  </div>
-                  <h3 className="font-display text-lg font-semibold text-[var(--color-text)] mb-2">
+          {/* Right Column: Editorial List with Separators */}
+          <div className="lg:col-span-7">
+            <ul className="divide-y divide-[var(--color-border)]">
+              {principles.map((p, idx) => (
+                <li key={idx} className="py-5 first:pt-0">
+                  <h3 className="font-display text-lg font-semibold text-[var(--color-text)] mb-1.5">
                     {p.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-[var(--color-text-muted)] leading-relaxed">
+                  <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
                     {p.desc}
                   </p>
-                </div>
-              </div>
-            ))}
+                </li>
+              ))}
+            </ul>
           </div>
 
         </div>

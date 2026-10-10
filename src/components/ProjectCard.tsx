@@ -33,18 +33,20 @@ export function ProjectCard({ project, featured = false }: ProjectCardProps) {
     { key: 'video', label: 'Video', icon: <Play className="h-3.5 w-3.5" aria-hidden="true" />, href: project.links.video },
   ].filter((l) => l.href)
 
-  const cardClass = featured
-    ? 'featured-project p-6 md:p-8 flex flex-col h-full'
-    : 'card p-6 flex flex-col h-full'
-
   return (
-    <article className={cardClass} aria-labelledby={`${project.id}-title`}>
+    <article
+      className={cn(
+        'border border-[var(--color-border)] rounded-xl p-6 flex flex-col h-full bg-[var(--color-bg-card)] transition-colors hover:border-[var(--color-border-hover)]',
+        featured && 'border-[var(--color-accent)]/30'
+      )}
+      aria-labelledby={`${project.id}-title`}
+    >
       {hasImage && (
         <div className="relative aspect-video mb-6 rounded-lg overflow-hidden bg-[var(--color-bg-elevated)]">
           <img
             src={project.image}
             alt=""
-            className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+            className="w-full h-full object-cover"
             loading="lazy"
           />
         </div>
@@ -95,15 +97,15 @@ export function ProjectCard({ project, featured = false }: ProjectCardProps) {
         )}
 
         {(links.length > 0 || project.futureDomain) && (
-          <div className="flex flex-wrap items-center gap-2 pt-2 border-t border-[var(--color-border)] mt-auto">
+          <div className="flex flex-wrap items-center gap-2 pt-4 border-t border-[var(--color-border)] mt-auto">
             {project.futureDomain && (
               <span
                 className="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg border border-dashed border-[var(--color-border)] bg-[var(--color-bg-elevated)]/50 text-xs text-[var(--color-text-subtle)] font-mono select-none"
                 title="Dominio futuro - En construcción"
               >
-                <Globe className="h-3.5 w-3.5 text-amber-400/80" aria-hidden="true" />
+                <Globe className="h-3.5 w-3.5 text-[var(--color-text-subtle)]" aria-hidden="true" />
                 <span>{project.futureDomain}</span>
-                <span className="text-[10px] uppercase font-sans tracking-wide text-amber-400 font-medium ml-1">
+                <span className="text-[10px] uppercase font-sans tracking-wide text-[var(--color-text-subtle)] font-medium ml-1">
                   (Próximamente)
                 </span>
               </span>
