@@ -63,13 +63,12 @@ export function Contact() {
     <section id="contacto" className="section bg-[var(--color-bg-elevated)]" aria-labelledby="contact-title">
       <div className="container">
         <header className="section-header mb-12 md:mb-16">
-          <span className="section-label">Contacto</span>
+          <span className="section-label">CONTACTO // CANALES DIRECTOS</span>
           <h2 id="contact-title" className="section-title">
-            ¿Algo que contarme?
+            Contacto y Comunicación
           </h2>
           <p className="section-description">
-            ¿Encontraste un bug? ¿Tienes una idea? ¿Solo quieres saludar?
-            Todos los canales llegan directo a mí.
+            Canales directos para consultas técnicas, proyectos de software o colaboración en código abierto.
           </p>
         </header>
 
@@ -100,8 +99,8 @@ export function Contact() {
         </div>
 
         <div className="mt-12 text-center">
-          <p className="text-[var(--color-text-subtle)]">
-            No hay formulario porque no hay backend. El email es lo más directo.
+          <p className="text-[var(--color-text-subtle)] text-xs font-mono">
+            Respuesta habitual en menos de 24 horas para consultas técnicas o propuestas de desarrollo.
           </p>
         </div>
       </div>

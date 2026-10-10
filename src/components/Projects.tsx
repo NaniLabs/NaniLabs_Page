@@ -35,9 +35,9 @@ export function Projects() {
           <div className="flex items-center justify-between mb-6">
             <span className="text-xs font-mono uppercase tracking-widest text-[var(--color-accent)] flex items-center gap-2">
               <Layers className="h-3.5 w-3.5" />
-              SISTEMAS INSIGNIA // SUITES PRINCIPALES
+              PROYECTOS PRINCIPALES // ECOSISTEMA
             </span>
-            <span className="text-xs font-mono text-[var(--color-text-subtle)]">SLAs ACTIVOS</span>
+            <span className="text-xs font-mono text-[var(--color-text-subtle)]">ACCESO DIRECTO</span>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -53,7 +53,7 @@ export function Projects() {
                       ● EN PRODUCCIÓN · MULTI-TENANT
                     </span>
                     <span className="text-xs font-mono text-[var(--color-text-subtle)]">
-                      CLOUD INFRASTRUCTURE
+                      ARQUITECTURA SERVERLESS
                     </span>
                   </div>
 
@@ -144,7 +144,7 @@ export function Projects() {
                     </div>
                     <div className="flex items-center gap-2">
                       <ShieldCheck className="h-3.5 w-3.5 text-cyan-400 shrink-0" />
-                      <span className="text-[var(--color-text-muted)]">Cero Servidores / Nube</span>
+                      <span className="text-[var(--color-text-muted)]">Operación 100% Local (LAN)</span>
                     </div>
                     <div className="col-span-2 text-[11px] text-[var(--color-text-subtle)] border-t border-white/5 pt-2">
                       Edge Panel táctil, portapapeles compartido instantáneo y streaming de cámara/pantalla.
@@ -186,9 +186,9 @@ export function Projects() {
           <div className="flex items-center justify-between mb-6">
             <span className="text-xs font-mono uppercase tracking-widest text-[var(--color-accent)] flex items-center gap-2">
               <span className="h-2 w-2 rounded-full bg-cyan-400" />
-              MOTORES, APLICACIONES DE ESCRITORIO Y CASOS DE USO
+              MOTORES, APLICACIONES DE ESCRITORIO Y HERRAMIENTAS
             </span>
-            <span className="text-xs font-mono text-[var(--color-text-subtle)]">4 SOLUCIONES ACTIVAS</span>
+            <span className="text-xs font-mono text-[var(--color-text-subtle)]">DESARROLLOS INDEPENDIENTES</span>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">

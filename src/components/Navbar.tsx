@@ -74,11 +74,6 @@ export function Navbar() {
               </div>
               <span>NaniLabs</span>
             </a>
-
-            <span className="hidden sm:inline-flex items-center gap-1.5 font-mono text-[10px] text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2 py-0.5 rounded-full">
-              <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
-              ONLINE
-            </span>
           </div>
 
           {/* Desktop Navigation Links */}

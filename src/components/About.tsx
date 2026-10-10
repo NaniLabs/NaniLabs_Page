@@ -4,23 +4,23 @@ export function About() {
   const principles = [
     {
       icon: <Shield className="h-5 w-5 text-cyan-400" />,
-      title: 'Soberanía del Dato & P2P',
+      title: 'Red Local y Privacidad',
       desc: 'Herramientas locales primero. DoubleLink comunica dispositivos en la red LAN sin transmitir datos a servidores externos ni almacenar perfiles.'
     },
     {
       icon: <Zap className="h-5 w-5 text-emerald-400" />,
       title: 'Arquitectura Serverless en Edge',
-      desc: 'Infraestructura web distribuida sobre Cloudflare Workers y D1 SQLite. Latencia menor a 15ms con costes operativos cercanos a cero.'
+      desc: 'Infraestructura web distribuida sobre Cloudflare Workers y D1 SQLite, optimizando recursos y tiempos de respuesta sin servidores dedicados tradicionales.'
     },
     {
       icon: <Wrench className="h-5 w-5 text-indigo-400" />,
-      title: 'Utilidad Práctica Inmediata',
-      desc: 'Cada proyecto resuelve un problema concreto: sincronización de portapapeles, cálculo exacto de comisiones en Mercado Libre o gestión de stock.'
+      title: 'Utilidad Práctica',
+      desc: 'Cada proyecto resuelve un problema operativo concreto: sincronización de dispositivos, cálculo financiero de comisiones o administración de stock.'
     },
     {
       icon: <Terminal className="h-5 w-5 text-amber-400" />,
-      title: 'Ingeniería Transparente',
-      desc: 'Software verificable, interfaces sin patrones oscuros ni suscripciones invasivas, y documentación técnica accesible para la comunidad.'
+      title: 'Código Abierto e Independiente',
+      desc: 'Software verificable, interfaces directas sin patrones oscuros ni suscripciones invasivas, y documentación técnica accesible para la comunidad.'
     }
   ]
 

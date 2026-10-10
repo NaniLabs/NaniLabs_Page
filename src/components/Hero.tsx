@@ -28,45 +28,45 @@ export function Hero() {
       key: 'doublelink',
       name: 'DoubleLink',
       version: 'v2.3.1',
-      badge: 'BETA LAN',
-      protocol: 'P2P WS // 8080',
-      stack: ['Flutter', 'Dart', 'WebSocket', 'Win32'],
+      badge: 'VERSIÓN LAN',
+      stack: ['Flutter', 'Dart', 'Win32 C++', 'WebSocket'],
       summary: 'Ecosistema de control y transferencia bidireccional local entre Android y Windows sin servidores intermedios.',
       link: 'https://doublelink.nanilabs.lat',
-      telemetry: 'LATENCIA: < 2ms · CIFRADO: LAN PRIVADA'
+      architecture: 'Arquitectura: Red LAN directa',
+      techDetail: 'Protocolo: WebSocket local · Cifrado en red'
     },
     {
       key: 'nanilabs-saas',
       name: 'NaniLabs SaaS',
       version: 'v1.0',
-      badge: 'PRODUCCIÓN',
-      protocol: 'EDGE D1 // 443',
-      stack: ['Next.js', 'Cloudflare Workers', 'D1', 'Mercado Pago'],
-      summary: 'Arquitectura comercial multi-tenant para inventario, reparaciones, órdenes de trabajo y cobros integrados.',
+      badge: 'EN PRODUCCIÓN',
+      stack: ['Cloudflare Workers', 'D1 SQLite', 'React', 'Mercado Pago'],
+      summary: 'Plataforma comercial y administrativa con base de datos relacional serverless, cobros integrados y portal de seguimiento.',
       link: 'https://saas.nanilabs.lat',
-      telemetry: 'UPTIME: 99.98% · RUNTIME: WORKERS V8'
+      architecture: 'Arquitectura: Serverless Cloudflare',
+      techDetail: 'Persistencia: Cloudflare D1 · Webhooks seguros'
     },
     {
       key: 'dobre',
       name: 'DoBre',
       version: 'v1.0',
-      badge: 'PRODUCCIÓN',
-      protocol: 'CALC // ML API',
-      stack: ['Vite', 'React', 'Tailwind', 'Cloudflare'],
-      summary: 'Motor de cálculo de rentabilidad y comisiones en Mercado Libre para optimización de precios reales.',
+      badge: 'HERRAMIENTA',
+      stack: ['React', 'TypeScript', 'Tailwind CSS'],
+      summary: 'Motor de cálculo para vendedores de Mercado Libre que determina comisiones exactas, costos de envío y margen neto real.',
       link: 'https://dobre.nanilabs.lat',
-      telemetry: 'RESOLUCIÓN: DETERMINISTA · CLIENT-SIDE'
+      architecture: 'Arquitectura: Client-side determinista',
+      techDetail: 'Cálculo instantáneo sin dependencias externas'
     },
     {
       key: 'organeyes',
       name: 'OrganEyes',
       version: 'v1.2',
       badge: 'UTILIDAD',
-      protocol: 'WIN_CLI // LOCAL',
-      stack: ['C++', 'Qt', 'Win32 IO'],
-      summary: 'Utilidad nativa para Windows de clasificación heurística automatizada y ordenamiento masivo de archivos.',
+      stack: ['C++', 'Qt Framework', 'Win32 APIs'],
+      summary: 'Herramienta de escritorio para Windows diseñada para la clasificación heurística y organización automática de archivos masivos.',
       link: 'https://github.com/NaniLabs/FreeSoft',
-      telemetry: 'EJECUCIÓN: ZERO MEMORY OVERHEAD'
+      architecture: 'Arquitectura: Binario nativo Windows',
+      techDetail: 'Procesamiento en memoria · Sin telemetría'
     }
   ]
 
@@ -96,11 +96,8 @@ export function Hero() {
             
             {/* Status Kicker */}
             <div className="inline-flex items-center gap-2.5 rounded-full border border-[var(--color-accent)]/30 bg-[var(--color-accent)]/10 px-3.5 py-1.5 text-xs font-mono text-[var(--color-accent)]">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75" />
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-500" />
-              </span>
-              <span>SYS.ACTIVE // REGION: AR-BUE // LAB_V2.4</span>
+              <span className="h-1.5 w-1.5 rounded-full bg-cyan-400" />
+              <span>LABORATORIO // DESARROLLO INDEPENDIENTE</span>
             </div>
 
             {/* Main Headline */}
@@ -150,51 +147,47 @@ export function Hero() {
               </a>
             </div>
 
-            {/* Live Technical Metrics Ribbon */}
+            {/* Real Architectural Highlights Ribbon */}
             <div className="pt-6 border-t border-[var(--color-border)]/60 grid grid-cols-3 gap-4 max-w-lg">
               <div className="flex items-center gap-2">
                 <Wifi className="h-4 w-4 text-[var(--color-accent)] shrink-0" />
                 <div className="text-xs">
-                  <div className="font-semibold text-[var(--color-text)]">P2P Local</div>
-                  <div className="text-[var(--color-text-subtle)] font-mono text-[11px]">Zero Cloud Relay</div>
+                  <div className="font-semibold text-[var(--color-text)]">Red Local LAN</div>
+                  <div className="text-[var(--color-text-subtle)] font-mono text-[11px]">Conexión directa</div>
                 </div>
               </div>
               <div className="flex items-center gap-2">
                 <Cpu className="h-4 w-4 text-emerald-400 shrink-0" />
                 <div className="text-xs">
-                  <div className="font-semibold text-[var(--color-text)]">Edge Workers</div>
-                  <div className="text-[var(--color-text-subtle)] font-mono text-[11px]">Latency &lt; 15ms</div>
+                  <div className="font-semibold text-[var(--color-text)]">Edge Serverless</div>
+                  <div className="text-[var(--color-text-subtle)] font-mono text-[11px]">Cloudflare Workers</div>
                 </div>
               </div>
               <div className="flex items-center gap-2">
                 <ShieldCheck className="h-4 w-4 text-indigo-400 shrink-0" />
                 <div className="text-xs">
-                  <div className="font-semibold text-[var(--color-text)]">Datos Aislados</div>
-                  <div className="text-[var(--color-text-subtle)] font-mono text-[11px]">SQLite D1 Engine</div>
+                  <div className="font-semibold text-[var(--color-text)]">Bases Relacionales</div>
+                  <div className="text-[var(--color-text-subtle)] font-mono text-[11px]">Cloudflare D1 SQL</div>
                 </div>
               </div>
             </div>
 
           </div>
 
-          {/* Column 2: Interactive Laboratory Telemetry Console (5 cols) */}
+          {/* Column 2: Spotlight Projects Panel (5 cols, clean architectural styling) */}
           <div className="lg:col-span-5">
             <div className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg-card)]/90 backdrop-blur-xl shadow-2xl overflow-hidden transition-all duration-300 hover:border-[var(--color-accent)]/40 hover:shadow-[0_0_30px_rgba(6,182,212,0.12)]">
               
-              {/* Terminal Window Header */}
+              {/* Sober Panel Header (No fake window chrome or red/yellow/green dots) */}
               <div className="px-4 py-3 bg-[var(--color-bg-elevated)] border-b border-[var(--color-border)] flex items-center justify-between">
                 <div className="flex items-center gap-2">
-                  <span className="h-3 w-3 rounded-full bg-rose-500/80 inline-block" />
-                  <span className="h-3 w-3 rounded-full bg-amber-500/80 inline-block" />
-                  <span className="h-3 w-3 rounded-full bg-emerald-500/80 inline-block" />
-                  <span className="ml-2 font-mono text-xs text-[var(--color-text-muted)] flex items-center gap-1.5">
-                    <Terminal className="h-3.5 w-3.5 text-[var(--color-accent)]" />
-                    nanilabs-kernel::telemetry
+                  <span className="font-mono text-xs text-[var(--color-accent)] font-semibold flex items-center gap-1.5">
+                    <Terminal className="h-3.5 w-3.5" />
+                    PROYECTOS SELECCIONADOS // ACCESO DIRECTO
                   </span>
                 </div>
-                <span className="font-mono text-[11px] text-emerald-400 flex items-center gap-1 bg-emerald-500/10 px-2 py-0.5 rounded">
-                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                  ONLINE
+                <span className="font-mono text-[10px] text-[var(--color-text-subtle)] uppercase">
+                  // DEMO VISUAL
                 </span>
               </div>
 
@@ -247,15 +240,13 @@ export function Hero() {
                   ))}
                 </div>
 
-                {/* Simulated Telemetry Readout */}
+                {/* Real Architecture Readout */}
                 <div className="p-3 rounded-lg bg-[var(--color-bg)] border border-[var(--color-border)] text-[11px] text-[var(--color-text-subtle)] space-y-1">
                   <div className="flex justify-between">
-                    <span className="text-[var(--color-text-muted)]">ENDPOINT:</span>
-                    <span className="text-cyan-400">{currentSys.protocol}</span>
+                    <span className="text-[var(--color-text-muted)]">{currentSys.architecture}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-[var(--color-text-muted)]">ESTADO:</span>
-                    <span className="text-emerald-400">{currentSys.telemetry}</span>
+                    <span className="text-cyan-400">{currentSys.techDetail}</span>
                   </div>
                 </div>
 
@@ -267,17 +258,17 @@ export function Hero() {
                     rel="noopener noreferrer"
                     className="w-full btn btn-primary text-xs py-2.5 inline-flex items-center justify-center gap-2"
                   >
-                    <span>Lanzar {currentSys.name}</span>
+                    <span>Abrir {currentSys.name}</span>
                     <ExternalLink className="h-3.5 w-3.5" />
                   </a>
                 </div>
 
               </div>
 
-              {/* Console Status Bar */}
+              {/* Sober Panel Footer */}
               <div className="px-4 py-2 bg-[var(--color-bg)]/80 border-t border-[var(--color-border)] text-[10px] font-mono text-[var(--color-text-subtle)] flex justify-between items-center">
-                <span>LAB_ID: NANILABS-CORE</span>
-                <span>SEC_VERIFIED // NO_TRACKING</span>
+                <span>INGENIERÍA INDEPENDIENTE</span>
+                <span>CÓDIGO VERIFICABLE</span>
               </div>
 
             </div>

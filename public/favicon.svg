@@ -1,7 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="NaniLabs">
-  <rect width="64" height="64" rx="14" fill="#101214"/>
-  <path d="M16 48V16h8l16 19V16h8v32h-8L24 29v19z" fill="#fff"/>
-  <rect x="12" y="52" width="13" height="3" fill="#ff1717"/>
-  <rect x="25" y="52" width="13" height="3" fill="#00b957"/>
-  <rect x="38" y="52" width="14" height="3" fill="#08aeea"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <rect width="64" height="64" rx="16" fill="#09090b"/>
+  <rect x="2" y="2" width="60" height="60" rx="14" stroke="#27272a" stroke-width="1"/>
+  <g transform="translate(14, 14)">
+    <polygon points="18 3 33 11.5 33 24.5 18 33 3 24.5 3 11.5 18 3" stroke="#06b6d4" stroke-width="2.5" stroke-linejoin="round" fill="rgba(6,182,212,0.12)"/>
+    <line x1="18" y1="33" x2="18" y2="18" stroke="#06b6d4" stroke-width="2.5" stroke-linecap="round"/>
+    <polyline points="3 11.5 18 18 33 11.5" stroke="#06b6d4" stroke-width="2.5" stroke-linejoin="round"/>
+  </g>
 </svg>
