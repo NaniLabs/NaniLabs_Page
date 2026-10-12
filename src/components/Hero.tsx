@@ -86,7 +86,7 @@ export function Hero() {
           <div className="mt-7 flex flex-wrap items-center gap-3">
             <a
               href="#proyectos"
-              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-md bg-zinc-100 hover:bg-zinc-200 text-zinc-950 font-medium text-sm transition-colors"
+              className="btn btn-primary"
             >
               <span>Ver proyectos</span>
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
@@ -96,7 +96,7 @@ export function Hero() {
               href="https://saas.nanilabs.lat"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-md border border-[var(--color-border)] bg-[var(--color-bg-card)] hover:bg-[var(--color-bg-elevated)] text-[var(--color-text)] text-sm transition-colors"
+              className="btn btn-secondary"
             >
               <span>NaniLabs SaaS</span>
               <ExternalLink className="h-4 w-4 text-[var(--color-text-subtle)]" aria-hidden="true" />

@@ -5,10 +5,31 @@ import { site } from '@/utils/content'
 
 function NaniLabsMark({ className }: { className?: string }) {
   return (
-    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-      <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2" />
-      <line x1="12" y1="22" x2="12" y2="12" />
-      <polyline points="2 8.5 12 12 22 8.5" />
+    <svg className={className} viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <linearGradient id="nl-right-grad" x1="74" y1="16" x2="74" y2="70" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stopColor="#29b6f6" />
+          <stop offset="55%" stopColor="#4f7df9" />
+          <stop offset="100%" stopColor="#6366f1" />
+        </linearGradient>
+        <linearGradient id="nl-diag-grad" x1="20" y1="16" x2="80" y2="84" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stopColor="#ffffff" />
+          <stop offset="70%" stopColor="#f4f4f5" />
+          <stop offset="100%" stopColor="#e0e7ff" />
+        </linearGradient>
+      </defs>
+      <path
+        d="M16 42C16 39.8 17.8 38 20 38H22.5C23.8 38 25 38.6 25.8 39.6L34.8 52.2C35.6 53.3 36 54.6 36 56V80C36 82.2 34.2 84 32 84H20C17.8 84 16 82.2 16 80V42Z"
+        fill="#fafafa"
+      />
+      <path
+        d="M18.5 16H34.5C36.4 16 38.2 16.9 39.3 18.4L83.2 79.2C84.7 81.2 83.2 84 80.8 84H65.5C63.6 84 61.8 83.1 60.7 81.6L16.8 20.8C15.3 18.8 16.8 16 19.2 16H18.5Z"
+        fill="url(#nl-diag-grad)"
+      />
+      <path
+        d="M64 20C64 17.8 65.8 16 68 16H80C82.2 16 84 17.8 84 20V66.5C84 68.2 81.9 69 80.9 67.6L64.8 45.2C64.3 44.5 64 43.6 64 42.7V20Z"
+        fill="url(#nl-right-grad)"
+      />
     </svg>
   )
 }
@@ -66,10 +87,10 @@ export function Navbar() {
           <div className="flex items-center gap-3">
             <a
               href="/"
-              className="flex items-center gap-2.5 font-display text-xl font-bold tracking-tight text-[var(--color-text)] focus-ring-visible rounded-md px-1 py-1 -ml-1 group"
+              className="flex items-center gap-2.5 font-display text-lg font-semibold tracking-tight text-[var(--color-text)] focus-ring-visible rounded-md px-1 py-1 -ml-1 group"
               aria-label={`${site.name} - Inicio`}
             >
-              <div className="h-8 w-8 rounded-lg bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 group-hover:border-cyan-400 transition-colors">
+              <div className="h-8 w-8 rounded-lg bg-[#0d0f14] border border-[var(--color-border)] flex items-center justify-center group-hover:border-[var(--color-border-hover)] transition-colors">
                 <NaniLabsMark className="h-5 w-5" />
               </div>
               <span>NaniLabs</span>
