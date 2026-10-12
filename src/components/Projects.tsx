@@ -13,15 +13,15 @@ export function Projects() {
       <div className="container">
         
         {/* Section Header */}
-        <header className="mb-16 text-left max-w-3xl">
+        <header className="mb-14 text-left max-w-3xl">
           <p className="text-xs font-mono uppercase tracking-widest text-[var(--color-text-subtle)] mb-3">
-            Portafolio de Ingeniería // Producción &amp; Lab
+            Portafolio de proyectos
           </p>
-          <h2 id="projects-title" className="font-display text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[var(--color-text)]">
+          <h2 id="projects-title" className="font-display text-2xl sm:text-3xl font-semibold tracking-tight text-[var(--color-text)]">
             Ecosistema de Software y Plataformas
           </h2>
-          <p className="text-base sm:text-lg text-[var(--color-text-muted)] mt-4 leading-relaxed">
-            Sistemas web comerciales multi-tenant, suites de conectividad P2P y motores de optimización financiera diseñados para operar sin intermediarios ni costes operativos superfluos.
+          <p className="text-sm sm:text-base text-[var(--color-text-muted)] mt-3 leading-relaxed">
+            Sistemas web comerciales multi-tenant, suites de conectividad P2P y utilidades de software diseñadas para operar sin intermediarios ni costes operativos superfluos.
           </p>
         </header>
 
@@ -45,10 +45,10 @@ export function Projects() {
                   </span>
                 </div>
 
-                <h3 className="font-display text-2xl md:text-3xl font-bold text-[var(--color-text)] mb-2">
+                <h3 className="font-display text-xl md:text-2xl font-semibold text-[var(--color-text)] mb-2">
                   {saasProject.name}
                 </h3>
-                <p className="text-sm font-mono text-[var(--color-accent)] mb-4">
+                <p className="text-sm font-mono text-[var(--color-text-subtle)] mb-4">
                   {saasProject.tagline || 'Desarrollo web y gestión a medida para negocios'}
                 </p>
 
@@ -69,7 +69,7 @@ export function Projects() {
                     href={saasProject.links.web || 'https://saas.nanilabs.lat'}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn btn-primary inline-flex items-center gap-2 text-sm px-5 py-2.5"
+                    className="inline-flex items-center gap-2 text-sm px-4 py-2 rounded-md bg-zinc-100 hover:bg-zinc-200 text-zinc-950 font-medium transition-colors"
                   >
                     <span>Abrir NaniLabs SaaS</span>
                     <ExternalLink className="h-4 w-4" />
@@ -85,7 +85,7 @@ export function Projects() {
             {doublelinkProject && (
               <div className="border border-[var(--color-border)] rounded-xl p-7 md:p-8 bg-[var(--color-bg-card)]">
                 <div className="flex items-center justify-between gap-4 mb-4">
-                  <span className="text-xs font-mono text-cyan-400">
+                  <span className="text-xs font-mono text-zinc-400">
                     ● Beta 2.3.1
                   </span>
                   <span className="text-xs font-mono text-[var(--color-text-subtle)]">
@@ -93,10 +93,10 @@ export function Projects() {
                   </span>
                 </div>
 
-                <h3 className="font-display text-2xl md:text-3xl font-bold text-[var(--color-text)] mb-2">
+                <h3 className="font-display text-xl md:text-2xl font-semibold text-[var(--color-text)] mb-2">
                   {doublelinkProject.name}
                 </h3>
-                <p className="text-sm font-mono text-[var(--color-accent)] mb-4">
+                <p className="text-sm font-mono text-[var(--color-text-subtle)] mb-4">
                   {doublelinkProject.tagline || 'Ecosistema de control y conectividad local sin nube'}
                 </p>
 
@@ -117,7 +117,7 @@ export function Projects() {
                     href={doublelinkProject.links.web || 'https://doublelink.nanilabs.lat'}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn btn-primary inline-flex items-center gap-2 text-sm px-5 py-2.5"
+                    className="inline-flex items-center gap-2 text-sm px-4 py-2 rounded-md bg-zinc-100 hover:bg-zinc-200 text-zinc-950 font-medium transition-colors"
                   >
                     <span>Descargar v2.3.1</span>
                     <ArrowRight className="h-4 w-4" />

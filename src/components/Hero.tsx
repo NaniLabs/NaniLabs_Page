@@ -65,33 +65,30 @@ export function Hero() {
         <div className="max-w-3xl">
 
           {/* Label */}
-          <p className="text-xs font-mono uppercase tracking-widest text-[var(--color-text-subtle)] mb-6">
-            Laboratorio independiente de desarrollo de software
+          <p className="text-xs font-mono uppercase tracking-widest text-[var(--color-text-subtle)] mb-4">
+            Laboratorio de desarrollo de software
           </p>
 
-          {/* Title - NO gradient */}
+          {/* Title - Human-scale, solid white, no AI color split, no motivational slogans */}
           <h1
             id="hero-title"
-            className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[var(--color-text)] leading-[1.08]"
+            className="font-display text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-[var(--color-text)] leading-snug"
           >
-            Ingeniería de software{' '}
-            <span className="text-[var(--color-accent)]">
-              práctica y descentralizada.
-            </span>
+            Herramientas de red local, utilidades libres y sistemas web.
           </h1>
 
           {/* Description */}
-          <p className="mt-6 text-base sm:text-lg text-[var(--color-text-muted)] max-w-xl leading-relaxed">
-            Laboratorio independiente de desarrollo enfocado en utilidades P2P de red local, sistemas web comerciales serverless sobre Cloudflare y optimización de flujos operativos sin dependencias corporativas innecesarias.
+          <p className="mt-4 text-sm sm:text-base text-[var(--color-text-muted)] max-w-xl leading-relaxed">
+            Desarrollo y mantenimiento de software: DoubleLink para integración y control de dispositivos en red local, utilidades de código abierto y plataformas web operativas sobre Cloudflare.
           </p>
 
-          {/* CTAs - simple, no glow */}
-          <div className="mt-8 flex flex-wrap items-center gap-4">
+          {/* CTAs - sober, high contrast */}
+          <div className="mt-7 flex flex-wrap items-center gap-3">
             <a
               href="#proyectos"
-              className="btn btn-primary inline-flex items-center gap-2 px-5 py-3"
+              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-md bg-zinc-100 hover:bg-zinc-200 text-zinc-950 font-medium text-sm transition-colors"
             >
-              <span>Explorar proyectos</span>
+              <span>Ver proyectos</span>
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </a>
 
@@ -99,10 +96,10 @@ export function Hero() {
               href="https://saas.nanilabs.lat"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn btn-secondary inline-flex items-center gap-2 px-5 py-3"
+              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-md border border-[var(--color-border)] bg-[var(--color-bg-card)] hover:bg-[var(--color-bg-elevated)] text-[var(--color-text)] text-sm transition-colors"
             >
               <span>NaniLabs SaaS</span>
-              <ExternalLink className="h-4 w-4 text-[var(--color-accent)]" aria-hidden="true" />
+              <ExternalLink className="h-4 w-4 text-[var(--color-text-subtle)]" aria-hidden="true" />
             </a>
           </div>
         </div>
@@ -119,13 +116,13 @@ export function Hero() {
               className={`block py-5 border-b border-[var(--color-border)] group hover:bg-white/[0.02] transition-colors ${idx > 0 ? '' : ''}`}
             >
               <div className="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-6">
-                <span className="font-display font-semibold text-[var(--color-text)] text-lg group-hover:text-[var(--color-accent)] transition-colors shrink-0">
+                <span className="font-display font-semibold text-[var(--color-text)] text-base group-hover:text-white transition-colors shrink-0">
                   {project.name}
                 </span>
                 <span className="text-xs font-mono text-[var(--color-text-subtle)] shrink-0">
                   {project.version}
                 </span>
-                <span className="text-xs font-mono text-[var(--color-accent)] shrink-0 hidden sm:inline">
+                <span className="text-xs font-mono text-[var(--color-text-subtle)] shrink-0 hidden sm:inline">
                   {project.status}
                 </span>
                 <span className="text-sm text-[var(--color-text-muted)] flex-1 min-w-0">
