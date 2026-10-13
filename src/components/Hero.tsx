@@ -102,7 +102,7 @@ export function Hero() {
               <div className="flex items-center gap-4 pb-5 border-b border-[var(--color-border)]">
                 <div className="h-14 w-14 rounded-xl bg-[#06080d] border border-[var(--color-border)] flex items-center justify-center p-2.5 shrink-0 shadow-inner">
                   <img
-                    src="/nanilabs_logo.png"
+                    src="/projects/nanilabs-saas.png"
                     alt="Logo de NaniLabs"
                     className="h-full w-full object-contain"
                   />
