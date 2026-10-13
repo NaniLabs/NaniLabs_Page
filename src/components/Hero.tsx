@@ -100,11 +100,11 @@ export function Hero() {
           <div className="lg:col-span-4 flex lg:justify-end animate-slide-up">
             <div className="w-full max-w-sm rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg-elevated)]/90 p-6 shadow-2xl backdrop-blur-md transition-all duration-300 hover:border-[var(--color-accent)]/50">
               <div className="flex items-center gap-4 pb-5 border-b border-[var(--color-border)]">
-                <div className="h-14 w-14 rounded-xl bg-[#06080d] border border-[var(--color-border)] flex items-center justify-center p-2.5 shrink-0 shadow-inner">
+                <div className="h-16 w-16 rounded-xl bg-[#000000] border border-[var(--color-border)] flex items-center justify-center overflow-hidden shrink-0 shadow-inner">
                   <img
-                    src="/projects/nanilabs-saas.png"
+                    src="/nanilabs_logo.png"
                     alt="Logo de NaniLabs"
-                    className="h-full w-full object-contain"
+                    className="h-full w-full object-contain scale-[1.55]"
                   />
                 </div>
                 <div>

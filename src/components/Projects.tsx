@@ -75,7 +75,7 @@ export function Projects() {
                       href={targetUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex h-16 w-16 shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-[var(--color-border)] bg-[#06080d] p-2.5 transition-transform duration-300 group-hover:scale-105 group-hover:border-[var(--color-accent)]/50"
+                      className="flex h-16 w-16 shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-[var(--color-border)] bg-[#06080d] p-1 transition-transform duration-300 group-hover:scale-105 group-hover:border-[var(--color-accent)]/50"
                       aria-label={`Abrir ${project.name}`}
                     >
                       {project.image ? (
@@ -84,8 +84,10 @@ export function Projects() {
                           alt={`Logo de ${project.name}`}
                           className={
                             isScreenshot
-                              ? 'h-full w-full rounded-lg object-cover'
-                              : 'h-full w-full object-contain'
+                              ? 'h-full w-full rounded-xl object-cover'
+                              : project.id === 'nanilabs-saas'
+                                ? 'h-full w-full object-contain scale-[1.55]'
+                                : 'h-full w-full object-contain scale-[1.18]'
                           }
                           loading="lazy"
                         />
