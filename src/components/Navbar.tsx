@@ -111,7 +111,17 @@ export function Navbar() {
           </div>
 
           {/* Right Action Buttons */}
-          <div className="hidden md:flex items-center gap-3">
+          <div className="hidden md:flex items-center gap-2.5">
+            <a
+              href="https://ceo.nanilabs.lat"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-xs font-mono px-3 py-1.5 rounded-lg border border-[var(--color-border)] bg-[var(--color-bg-elevated)] text-[var(--color-text)] hover:border-[var(--color-accent)]/50 transition-colors"
+            >
+              <span>Perfil &amp; CV</span>
+              <ExternalLink className="h-3 w-3 text-[var(--color-accent)]" />
+            </a>
+
             <a
               href="https://saas.nanilabs.lat"
               target="_blank"

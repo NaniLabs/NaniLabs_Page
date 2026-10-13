@@ -1,4 +1,4 @@
-import { ArrowRight, ExternalLink } from 'lucide-react'
+import { ArrowDown, ArrowUpRight } from 'lucide-react'
 import { site } from '@/utils/content'
 
 function GithubIcon({ className }: { className?: string }) {
@@ -19,143 +19,135 @@ function InstagramIcon({ className }: { className?: string }) {
   )
 }
 
-const featuredProjects = [
-  {
-    name: 'DoubleLink',
-    version: 'v2.3.1',
-    status: 'LAN · Activo',
-    stack: 'Flutter · Dart · Win32 C++ · WebSocket',
-    summary: 'Transferencia bidireccional local entre Android y Windows sin servidores intermedios.',
-    link: 'https://doublelink.nanilabs.lat',
-  },
-  {
-    name: 'NaniLabs SaaS',
-    version: 'v1.0',
-    status: 'Producción · Multi-tenant',
-    stack: 'Cloudflare Workers · D1 SQLite · React · Mercado Pago',
-    summary: 'Plataforma comercial serverless con base relacional y cobros integrados.',
-    link: 'https://saas.nanilabs.lat',
-  },
-  {
-    name: 'DoBre',
-    version: 'v1.0',
-    status: 'Herramienta',
-    stack: 'React · TypeScript · Tailwind CSS',
-    summary: 'Motor de cálculo de comisiones, envíos y margen neto para vendedores de Mercado Libre.',
-    link: 'https://dobre.nanilabs.lat',
-  },
-  {
-    name: 'OrganEyes',
-    version: 'v1.2',
-    status: 'Utilidad · Windows',
-    stack: 'C++ · Qt Framework · Win32 APIs',
-    summary: 'Clasificación heurística y organización automática de archivos masivos.',
-    link: 'https://github.com/NaniLabs/FreeSoft',
-  },
-]
-
 export function Hero() {
   return (
     <section
       id="inicio"
-      className="relative min-h-[90vh] flex items-center pt-24 pb-16 bg-[var(--color-bg)]"
+      className="relative overflow-hidden pt-28 pb-16 sm:pt-32 sm:pb-20 bg-[var(--color-bg)] border-b border-[var(--color-border)]"
       aria-labelledby="hero-title"
     >
-      <div className="container">
-        <div className="max-w-3xl">
+      {/* Subtle architectural grid & ambient glow */}
+      <div
+        className="pointer-events-none absolute inset-0 opacity-[0.04]"
+        style={{
+          backgroundImage:
+            'linear-gradient(to right, #38bdf8 1px, transparent 1px), linear-gradient(to bottom, #38bdf8 1px, transparent 1px)',
+          backgroundSize: '48px 48px',
+        }}
+        aria-hidden="true"
+      />
+      <div
+        className="pointer-events-none absolute -top-32 right-1/4 h-96 w-96 rounded-full bg-sky-500/10 blur-3xl"
+        aria-hidden="true"
+      />
 
-          {/* Label */}
-          <p className="text-xs font-mono uppercase tracking-widest text-[var(--color-text-subtle)] mb-4">
-            Laboratorio de desarrollo de software
-          </p>
+      <div className="container relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          {/* Left column: NaniLabs identity and direct personal lab intro */}
+          <div className="lg:col-span-8 animate-fade-in">
+            <div className="inline-flex items-center gap-2.5 rounded-full border border-[var(--color-border)] bg-[var(--color-bg-elevated)] px-3.5 py-1.5 mb-6">
+              <span className="h-2 w-2 rounded-full bg-[var(--color-accent)] animate-pulse" />
+              <span className="text-xs font-mono uppercase tracking-widest text-[var(--color-text-muted)]">
+                NaniLabs · Portfolio &amp; Laboratorio de Software
+              </span>
+            </div>
 
-          {/* Title - Human-scale, solid white, no AI color split, no motivational slogans */}
-          <h1
-            id="hero-title"
-            className="font-display text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-[var(--color-text)] leading-snug"
-          >
-            Herramientas de red local, utilidades libres y sistemas web.
-          </h1>
-
-          {/* Description */}
-          <p className="mt-4 text-sm sm:text-base text-[var(--color-text-muted)] max-w-xl leading-relaxed">
-            Desarrollo y mantenimiento de software: DoubleLink para integración y control de dispositivos en red local, utilidades de código abierto y plataformas web operativas sobre Cloudflare.
-          </p>
-
-          {/* CTAs - sober, high contrast */}
-          <div className="mt-7 flex flex-wrap items-center gap-3">
-            <a
-              href="#proyectos"
-              className="btn btn-primary"
+            <h1
+              id="hero-title"
+              className="font-display text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-[var(--color-text)] leading-[1.15]"
             >
-              <span>Ver proyectos</span>
-              <ArrowRight className="h-4 w-4" aria-hidden="true" />
-            </a>
+              Mis proyectos de software, herramientas locales y sistemas web.
+            </h1>
 
-            <a
-              href="https://saas.nanilabs.lat"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-secondary"
-            >
-              <span>NaniLabs SaaS</span>
-              <ExternalLink className="h-4 w-4 text-[var(--color-text-subtle)]" aria-hidden="true" />
-            </a>
+            <p className="mt-5 text-base sm:text-lg text-[var(--color-text-muted)] max-w-2xl leading-relaxed">
+              Espacio donde concentro lo que construyo y mantengo bajo la marca <strong className="text-[var(--color-text)] font-medium">NaniLabs</strong>: conectividad local entre Android y Windows con <strong className="text-[var(--color-text)] font-medium">DoubleLink</strong>, plataformas serverless en Cloudflare, la calculadora <strong className="text-[var(--color-text)] font-medium">DoBre</strong> y utilidades de escritorio dentro de la rama <strong className="text-[var(--color-text)] font-medium">FreeSoft</strong>.
+            </p>
+
+            {/* Clear, unambiguous CTA buttons */}
+            <div className="mt-8 flex flex-wrap items-center gap-3.5">
+              <a
+                href="#proyectos"
+                className="btn btn-primary group"
+              >
+                <span>Ver todos los proyectos</span>
+                <ArrowDown className="h-4 w-4 transition-transform duration-200 group-hover:translate-y-0.5" aria-hidden="true" />
+              </a>
+
+              <a
+                href="https://ceo.nanilabs.lat"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-secondary group hover:border-[var(--color-accent)]/60"
+              >
+                <span>Perfil &amp; CV (ceo.nanilabs.lat)</span>
+                <ArrowUpRight className="h-4 w-4 text-[var(--color-accent)] transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" aria-hidden="true" />
+              </a>
+
+              <a
+                href={site.social.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-secondary group"
+              >
+                <GithubIcon className="h-4 w-4" />
+                <span>github.com/NaniLabs</span>
+                <ArrowUpRight className="h-3.5 w-3.5 text-[var(--color-text-subtle)] transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" aria-hidden="true" />
+              </a>
+            </div>
           </div>
-        </div>
 
-        {/* Editorial project list - NOT a console, NOT tabs */}
-        <div className="mt-16 border-t border-[var(--color-border)]">
-          <h2 className="sr-only">Proyectos destacados</h2>
-          {featuredProjects.map((project, idx) => (
-            <a
-              key={project.name}
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`block py-5 border-b border-[var(--color-border)] group hover:bg-white/[0.02] transition-colors ${idx > 0 ? '' : ''}`}
-            >
-              <div className="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-6">
-                <span className="font-display font-semibold text-[var(--color-text)] text-base group-hover:text-white transition-colors shrink-0">
-                  {project.name}
-                </span>
-                <span className="text-xs font-mono text-[var(--color-text-subtle)] shrink-0">
-                  {project.version}
-                </span>
-                <span className="text-xs font-mono text-[var(--color-text-subtle)] shrink-0 hidden sm:inline">
-                  {project.status}
-                </span>
-                <span className="text-sm text-[var(--color-text-muted)] flex-1 min-w-0">
-                  {project.summary}
-                </span>
-                <span className="text-xs text-[var(--color-text-subtle)] hidden md:inline shrink-0">
-                  {project.stack}
+          {/* Right column: NaniLabs Brand Emblem Card */}
+          <div className="lg:col-span-4 flex lg:justify-end animate-slide-up">
+            <div className="w-full max-w-sm rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg-elevated)]/90 p-6 shadow-2xl backdrop-blur-md transition-all duration-300 hover:border-[var(--color-accent)]/50">
+              <div className="flex items-center gap-4 pb-5 border-b border-[var(--color-border)]">
+                <div className="h-14 w-14 rounded-xl bg-[#06080d] border border-[var(--color-border)] flex items-center justify-center p-2.5 shrink-0 shadow-inner">
+                  <img
+                    src="/nanilabs_logo.png"
+                    alt="Logo de NaniLabs"
+                    className="h-full w-full object-contain"
+                  />
+                </div>
+                <div>
+                  <p className="font-display text-lg font-semibold text-[var(--color-text)]">
+                    NaniLabs
+                  </p>
+                  <p className="text-xs font-mono text-[var(--color-accent)]">
+                    por Ignacio Exequiel Meoniz
+                  </p>
+                </div>
+              </div>
+
+              <div className="py-4 space-y-3 text-xs font-mono">
+                <div className="flex items-center justify-between text-[var(--color-text-muted)]">
+                  <span>Rama Web &amp; Cloud</span>
+                  <span className="text-[var(--color-text)]">Cloudflare Workers · React</span>
+                </div>
+                <div className="flex items-center justify-between text-[var(--color-text-muted)]">
+                  <span>Rama Local LAN</span>
+                  <span className="text-[var(--color-text)]">Flutter · Dart · Win32</span>
+                </div>
+                <div className="flex items-center justify-between text-[var(--color-text-muted)]">
+                  <span>Rama FreeSoft</span>
+                  <span className="text-[var(--color-text)]">C++ · Qt · Python</span>
+                </div>
+              </div>
+
+              <div className="pt-4 border-t border-[var(--color-border)] flex items-center justify-between text-xs">
+                <a
+                  href={site.social.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-[var(--color-text-muted)] hover:text-[var(--color-accent)] transition-colors"
+                >
+                  <InstagramIcon className="h-3.5 w-3.5" />
+                  <span>@nanilabs.lat</span>
+                </a>
+                <span className="font-mono text-[var(--color-text-subtle)]">
+                  Argentina
                 </span>
               </div>
-            </a>
-          ))}
-        </div>
-
-        {/* Minimal footer */}
-        <div className="mt-8 flex flex-wrap items-center gap-6 text-xs text-[var(--color-text-subtle)]">
-          <a
-            href={site.social.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-[var(--color-text)] transition-colors flex items-center gap-1.5"
-          >
-            <GithubIcon className="h-3.5 w-3.5" />
-            <span>GitHub</span>
-          </a>
-          <a
-            href={site.social.instagram}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-[var(--color-text)] transition-colors flex items-center gap-1.5"
-          >
-            <InstagramIcon className="h-3.5 w-3.5" />
-            <span>Instagram</span>
-          </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>

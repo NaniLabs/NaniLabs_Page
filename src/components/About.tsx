@@ -3,78 +3,80 @@ import { ArrowUpRight } from 'lucide-react'
 export function About() {
   const principles = [
     {
-      title: 'Red Local y Privacidad',
-      desc: 'Herramientas locales primero. DoubleLink comunica dispositivos en la red LAN sin transmitir datos a servidores externos ni almacenar perfiles.'
+      title: 'Red Local Primero (DoubleLink)',
+      desc: 'Comunicación directa entre Android y Windows dentro de la red LAN/Wi-Fi local, sin cuentas obligatorias ni servidores intermedios.'
     },
     {
-      title: 'Arquitectura Serverless en Edge',
-      desc: 'Infraestructura web distribuida sobre Cloudflare Workers y D1 SQLite, optimizando recursos y tiempos de respuesta sin servidores dedicados tradicionales.'
+      title: 'Web Serverless en Cloudflare',
+      desc: 'Sistemas web y herramientas desplegadas sobre Cloudflare Workers, Pages y D1 SQLite para mantener latencia mínima y costos controlados.'
     },
     {
-      title: 'Utilidad Práctica',
-      desc: 'Cada proyecto resuelve un problema operativo concreto: sincronización de dispositivos, cálculo financiero de comisiones o administración de stock.'
+      title: 'Rama FreeSoft (C++ / Qt / Python)',
+      desc: 'Software de escritorio liviano y de código abierto (Aquamarine y OrganEyes) enfocado en resolver tareas cotidianas en Windows.'
     },
     {
-      title: 'Código Abierto e Independiente',
-      desc: 'Software verificable, interfaces directas sin patrones oscuros ni suscripciones invasivas, y documentación técnica accesible para la comunidad.'
+      title: 'Herramientas Concretas (DoBre)',
+      desc: 'Utilidades específicas como DoBre para calcular precios de publicación y comisiones reales de Mercado Libre sin hojas de cálculo complejas.'
     }
   ]
 
   return (
-    <section id="sobre" className="section relative bg-[var(--color-bg)] py-20" aria-labelledby="about-title">
+    <section id="sobre" className="section relative bg-[var(--color-bg)] py-20 border-b border-[var(--color-border)]" aria-labelledby="about-title">
       <div className="container">
-        
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-          
-          {/* Left Column: Lab Narrative */}
-          <div className="lg:col-span-5 text-left space-y-6">
-            <p className="text-xs font-mono uppercase tracking-widest text-[var(--color-text-subtle)]">
-              Laboratorio // Identidad &amp; Principios
-            </p>
+          {/* Left Column */}
+          <div className="lg:col-span-5 text-left space-y-5">
+            <div className="inline-flex items-center gap-2">
+              <span className="h-px w-6 bg-[var(--color-accent)]" />
+              <p className="text-xs font-mono uppercase tracking-widest text-[var(--color-accent)]">
+                Sobre NaniLabs
+              </p>
+            </div>
 
-            <h2 id="about-title" className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-[var(--color-text)]">
-              Desarrollo de software impulsado por la utilidad real.
+            <h2 id="about-title" className="font-display text-2xl sm:text-3xl font-semibold tracking-tight text-[var(--color-text)]">
+              Mi marca personal de desarrollo y laboratorio de proyectos.
             </h2>
 
-            <p className="text-base text-[var(--color-text-muted)] leading-relaxed">
-              NaniLabs es un laboratorio independiente de ingeniería de software fundado y dirigido por <strong className="text-[var(--color-text)]">Ignacio Exequiel Meoniz</strong>. Concebimos, construimos y desplegamos herramientas donde la arquitectura técnica y la simpleza de uso se encuentran.
+            <p className="text-sm sm:text-base text-[var(--color-text-muted)] leading-relaxed">
+              <strong className="text-[var(--color-text)] font-medium">NaniLabs</strong> es el espacio donde agrupo mis desarrollos de software, experimentos técnicos y aplicaciones activas. Creado y mantenido por <strong className="text-[var(--color-text)] font-medium">Ignacio Exequiel Meoniz</strong>.
             </p>
 
-            <p className="text-base text-[var(--color-text-muted)] leading-relaxed">
-              Lejos de plantillas corporativas o proyectos inflados artificialmente, cada producto de NaniLabs surge de un desafío de optimización verificado en el mundo real.
+            <p className="text-sm sm:text-base text-[var(--color-text-muted)] leading-relaxed">
+              Cada proyecto nace de una necesidad técnica real: conectar el teléfono con la PC sin cables, calcular márgenes exactos en Mercado Libre o administrar inventario y archivos localmente.
             </p>
 
-            <div className="pt-4">
+            <div className="pt-3">
               <a
                 href="https://ceo.nanilabs.lat"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm font-mono text-[var(--color-accent)] hover:underline"
+                className="btn btn-secondary group"
               >
-                <span>Conocer al fundador (Ignacio Meoniz)</span>
-                <ArrowUpRight className="h-4 w-4" />
+                <span>Ver perfil y CV de Ignacio Meoniz (ceo.nanilabs.lat)</span>
+                <ArrowUpRight className="h-4 w-4 text-[var(--color-accent)] transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </a>
             </div>
           </div>
 
-          {/* Right Column: Editorial List with Separators */}
+          {/* Right Column */}
           <div className="lg:col-span-7">
-            <ul className="divide-y divide-[var(--color-border)]">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {principles.map((p, idx) => (
-                <li key={idx} className="py-5 first:pt-0">
-                  <h3 className="font-display text-lg font-semibold text-[var(--color-text)] mb-1.5">
+                <div
+                  key={idx}
+                  className="rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-elevated)]/60 p-5 transition-colors duration-200 hover:border-[var(--color-accent)]/40"
+                >
+                  <h3 className="font-display text-base font-semibold text-[var(--color-text)] mb-2">
                     {p.title}
                   </h3>
                   <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
                     {p.desc}
                   </p>
-                </li>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
-
         </div>
-
       </div>
     </section>
   )
