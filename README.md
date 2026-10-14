@@ -30,3 +30,12 @@ If you are developing a production application, we recommend enabling type-aware
 ```
 
 See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+
+## DoubleLink Release Candidate Note (Beta 2.3.2)
+
+- **Project:** DoubleLink
+- **Candidate Version:** Beta 2.3.2 (local candidate preparation)
+- **Catalog Status:** Local entry updated to Beta 2.3.2 (`version`: `2.3.2`, `status`: `Beta 2.3.2`) in `src/data/projects.json`.
+- **Public Manifest & R2 State:** Current public release manifest on Cloudflare R2 (`https://pub-e7f8fb195c3c42b59e5da4c5c345837b.r2.dev/releases.json`) stays at 2.3.1 until authorized publish.
+- **Scope & Features:** Retains real existing feature description (LAN hub, companion bidireccional Android ↔ Windows), URLs, assets, technologies, and releaseSource. No publication claim, physical QA success claim, or pending clipboard/WOL implementation claim.
+- **Deployment & Approval:** Final deployment and site publishing are strictly prohibited until the user explicitly approves the completed release and R2 publication. Existing production deployment process and correct project naming are preserved.
