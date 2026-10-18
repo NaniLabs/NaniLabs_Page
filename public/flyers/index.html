@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>Flyers Instagram Stories — NaniLabs</title>
+<title>Flyers Stories Instagram — NaniLabs</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@600;700&display=swap');
 
@@ -22,7 +22,7 @@
   }
 
   header {
-    margin-bottom: 28px;
+    margin-bottom: 24px;
     padding-bottom: 20px;
     border-bottom: 1px solid #1e2433;
   }
@@ -44,7 +44,7 @@
 
   h1 {
     font-family: 'Space Grotesk', sans-serif;
-    font-size: 28px;
+    font-size: 26px;
     letter-spacing: -0.02em;
     color: #fff;
     margin-bottom: 8px;
@@ -55,6 +55,29 @@
     color: #94a3b8;
     line-height: 1.5;
   }
+
+  .actions-row {
+    margin-top: 16px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .zip-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #38bdf8;
+    color: #05070a;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 10px 20px;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: opacity 0.15s ease;
+  }
+
+  .zip-btn:hover { opacity: 0.9; }
 
   /* Filters */
   .filter-tabs {
@@ -150,7 +173,7 @@
 
   .card-title {
     font-family: 'Space Grotesk', sans-serif;
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 700;
     color: #fff;
   }
@@ -222,11 +245,11 @@
   <div class="container">
     <header>
       <div class="badge-top">Instagram Stories · 1080×1920 · 9:16</div>
-      <h1>Flyers Oficiales — NaniLabs</h1>
-      <p class="subtitle">3 variantes optimizadas por cada proyecto (15 en total). Tocá cualquier flyer para verlo a pantalla completa o presioná <strong>Descargar</strong> para guardarlo en la galería de tu celular.</p>
-      <div style="margin-top: 16px; display: flex; gap: 12px; flex-wrap: wrap;">
-        <a href="flyers_nanilabs.zip" download="flyers_nanilabs.zip" style="display: inline-flex; align-items: center; gap: 8px; background: #38bdf8; color: #05070a; font-weight: 700; font-size: 14px; padding: 10px 20px; border-radius: 999px; text-decoration: none;">
-          <span>📦 Descargar los 15 Flyers en .ZIP (4.2 MB)</span>
+      <h1>Flyers para Stories — NaniLabs</h1>
+      <p class="subtitle">Diseñados específicamente para historias de Instagram: limpios, sin texto de más y con área lista para que pongas el sticker de enlace oficial.</p>
+      <div class="actions-row">
+        <a class="zip-btn" href="flyers_nanilabs.zip" download="flyers_nanilabs.zip">
+          <span>📦 Descargar los 15 Flyers en .ZIP</span>
         </a>
       </div>
     </header>
@@ -243,16 +266,16 @@
     <div class="grid">
       
         <article class="flyer-card" data-project="NaniLabs">
-          <div class="img-wrapper" onclick="openModal('nanilabs_01_ecosistema.png')">
+          <div class="img-wrapper" onclick="openModal('nanilabs_01_hub.png')">
             <span class="overlay-tag">NaniLabs</span>
-            <img src="nanilabs_01_ecosistema.png" alt="Software de utilidad real, <span>sin intermediarios</span> ni nube obligatoria." loading="lazy">
+            <img src="nanilabs_01_hub.png" alt="Herramientas locales y <span>sistemas web</span>." loading="lazy">
           </div>
           <div class="card-info">
             <div>
-              <div class="card-variant">Variante 1 · Ecosistema de Software</div>
-              <h3 class="card-title">NaniLabs: Software de utilidad real, sin intermediarios ni nube obligatoria.</h3>
+              <div class="card-variant">Variante 1 · Hub de Software</div>
+              <h3 class="card-title">NaniLabs: Herramientas locales y sistemas web.</h3>
             </div>
-            <a class="download-btn" href="nanilabs_01_ecosistema.png" download="nanilabs_01_ecosistema.png">
+            <a class="download-btn" href="nanilabs_01_hub.png" download="nanilabs_01_hub.png">
               <span>Descargar PNG</span>
               <span>↓</span>
             </a>
@@ -260,16 +283,16 @@
         </article>
       
         <article class="flyer-card" data-project="NaniLabs">
-          <div class="img-wrapper" onclick="openModal('nanilabs_02_arquitectura.png')">
+          <div class="img-wrapper" onclick="openModal('nanilabs_02_lab.png')">
             <span class="overlay-tag">NaniLabs</span>
-            <img src="nanilabs_02_arquitectura.png" alt="Construido para <span>rendimiento real</span> y privacidad estricta." loading="lazy">
+            <img src="nanilabs_02_lab.png" alt="Software sin nube obligatoria <span>ni telemetría</span>." loading="lazy">
           </div>
           <div class="card-info">
             <div>
-              <div class="card-variant">Variante 2 · Filosofía & Stack</div>
-              <h3 class="card-title">NaniLabs: Construido para rendimiento real y privacidad estricta.</h3>
+              <div class="card-variant">Variante 2 · Filosofía</div>
+              <h3 class="card-title">NaniLabs: Software sin nube obligatoria ni telemetría.</h3>
             </div>
-            <a class="download-btn" href="nanilabs_02_arquitectura.png" download="nanilabs_02_arquitectura.png">
+            <a class="download-btn" href="nanilabs_02_lab.png" download="nanilabs_02_lab.png">
               <span>Descargar PNG</span>
               <span>↓</span>
             </a>
@@ -277,16 +300,16 @@
         </article>
       
         <article class="flyer-card" data-project="NaniLabs">
-          <div class="img-wrapper" onclick="openModal('nanilabs_03_perfil.png')">
+          <div class="img-wrapper" onclick="openModal('nanilabs_03_portfolio.png')">
             <span class="overlay-tag">NaniLabs</span>
-            <img src="nanilabs_03_perfil.png" alt="Laboratorio independiente de <span>software y desarrollo</span>." loading="lazy">
+            <img src="nanilabs_03_portfolio.png" alt="Conocé mi <span>portfolio técnico</span> y proyectos." loading="lazy">
           </div>
           <div class="card-info">
             <div>
-              <div class="card-variant">Variante 3 · Tarjeta de Identidad</div>
-              <h3 class="card-title">NaniLabs: Laboratorio independiente de software y desarrollo.</h3>
+              <div class="card-variant">Variante 3 · Perfil & CV</div>
+              <h3 class="card-title">NaniLabs: Conocé mi portfolio técnico y proyectos.</h3>
             </div>
-            <a class="download-btn" href="nanilabs_03_perfil.png" download="nanilabs_03_perfil.png">
+            <a class="download-btn" href="nanilabs_03_portfolio.png" download="nanilabs_03_portfolio.png">
               <span>Descargar PNG</span>
               <span>↓</span>
             </a>
@@ -296,12 +319,12 @@
         <article class="flyer-card" data-project="DoubleLink">
           <div class="img-wrapper" onclick="openModal('doublelink_01_hero.png')">
             <span class="overlay-tag">DoubleLink</span>
-            <img src="doublelink_01_hero.png" alt="Controlá tu PC desde tu celular <span>sin intermediarios</span>." loading="lazy">
+            <img src="doublelink_01_hero.png" alt="Tu PC en tu teléfono. <span>Sin cables ni internet</span>." loading="lazy">
           </div>
           <div class="card-info">
             <div>
               <div class="card-variant">Variante 1 · Lanzamiento v2.3.1</div>
-              <h3 class="card-title">DoubleLink: Controlá tu PC desde tu celular sin intermediarios.</h3>
+              <h3 class="card-title">DoubleLink: Tu PC en tu teléfono. Sin cables ni internet.</h3>
             </div>
             <a class="download-btn" href="doublelink_01_hero.png" download="doublelink_01_hero.png">
               <span>Descargar PNG</span>
@@ -313,12 +336,12 @@
         <article class="flyer-card" data-project="DoubleLink">
           <div class="img-wrapper" onclick="openModal('doublelink_02_archivos.png')">
             <span class="overlay-tag">DoubleLink</span>
-            <img src="doublelink_02_archivos.png" alt="Transferí archivos pesados y <span>copiá texto sin internet</span>." loading="lazy">
+            <img src="doublelink_02_archivos.png" alt="Pasá fotos y archivos <span>sin usar cables ni WhatsApp</span>." loading="lazy">
           </div>
           <div class="card-info">
             <div>
-              <div class="card-variant">Variante 2 · Archivos & Portapapeles</div>
-              <h3 class="card-title">DoubleLink: Transferí archivos pesados y copiá texto sin internet.</h3>
+              <div class="card-variant">Variante 2 · Archivos LAN</div>
+              <h3 class="card-title">DoubleLink: Pasá fotos y archivos sin usar cables ni WhatsApp.</h3>
             </div>
             <a class="download-btn" href="doublelink_02_archivos.png" download="doublelink_02_archivos.png">
               <span>Descargar PNG</span>
@@ -328,16 +351,16 @@
         </article>
       
         <article class="flyer-card" data-project="DoubleLink">
-          <div class="img-wrapper" onclick="openModal('doublelink_03_seguridad_pin.png')">
+          <div class="img-wrapper" onclick="openModal('doublelink_03_pin.png')">
             <span class="overlay-tag">DoubleLink</span>
-            <img src="doublelink_03_seguridad_pin.png" alt="Vinculación con código PIN <span>sin crear ninguna cuenta</span>." loading="lazy">
+            <img src="doublelink_03_pin.png" alt="Vinculá con un PIN <span>sin crear ninguna cuenta</span>." loading="lazy">
           </div>
           <div class="card-info">
             <div>
               <div class="card-variant">Variante 3 · Vinculación por PIN</div>
-              <h3 class="card-title">DoubleLink: Vinculación con código PIN sin crear ninguna cuenta.</h3>
+              <h3 class="card-title">DoubleLink: Vinculá con un PIN sin crear ninguna cuenta.</h3>
             </div>
-            <a class="download-btn" href="doublelink_03_seguridad_pin.png" download="doublelink_03_seguridad_pin.png">
+            <a class="download-btn" href="doublelink_03_pin.png" download="doublelink_03_pin.png">
               <span>Descargar PNG</span>
               <span>↓</span>
             </a>
@@ -345,16 +368,16 @@
         </article>
       
         <article class="flyer-card" data-project="NaniLabs SaaS">
-          <div class="img-wrapper" onclick="openModal('saas_01_arquitectura.png')">
+          <div class="img-wrapper" onclick="openModal('saas_01_serverless.png')">
             <span class="overlay-tag">NaniLabs SaaS</span>
-            <img src="saas_01_arquitectura.png" alt="Sistemas comerciales de <span>alto rendimiento sobre Cloudflare</span>." loading="lazy">
+            <img src="saas_01_serverless.png" alt="Sistemas web de <span>alta velocidad sobre Cloudflare</span>." loading="lazy">
           </div>
           <div class="card-info">
             <div>
-              <div class="card-variant">Variante 1 · Serverless en Edge</div>
-              <h3 class="card-title">NaniLabs SaaS: Sistemas comerciales de alto rendimiento sobre Cloudflare.</h3>
+              <div class="card-variant">Variante 1 · Serverless Edge</div>
+              <h3 class="card-title">NaniLabs SaaS: Sistemas web de alta velocidad sobre Cloudflare.</h3>
             </div>
-            <a class="download-btn" href="saas_01_arquitectura.png" download="saas_01_arquitectura.png">
+            <a class="download-btn" href="saas_01_serverless.png" download="saas_01_serverless.png">
               <span>Descargar PNG</span>
               <span>↓</span>
             </a>
@@ -381,12 +404,12 @@
         <article class="flyer-card" data-project="NaniLabs SaaS">
           <div class="img-wrapper" onclick="openModal('saas_03_eficiencia.png')">
             <span class="overlay-tag">NaniLabs SaaS</span>
-            <img src="saas_03_eficiencia.png" alt="Olvidate de pagar <span>servidores VPS ociosos</span> las 24 horas." loading="lazy">
+            <img src="saas_03_eficiencia.png" alt="Chau a pagar <span>servidores VPS caros</span> las 24 horas." loading="lazy">
           </div>
           <div class="card-info">
             <div>
-              <div class="card-variant">Variante 3 · Eficiencia de Costos</div>
-              <h3 class="card-title">NaniLabs SaaS: Olvidate de pagar servidores VPS ociosos las 24 horas.</h3>
+              <div class="card-variant">Variante 3 · Cero Servidores Ociosos</div>
+              <h3 class="card-title">NaniLabs SaaS: Chau a pagar servidores VPS caros las 24 horas.</h3>
             </div>
             <a class="download-btn" href="saas_03_eficiencia.png" download="saas_03_eficiencia.png">
               <span>Descargar PNG</span>
@@ -396,16 +419,16 @@
         </article>
       
         <article class="flyer-card" data-project="DoBre">
-          <div class="img-wrapper" onclick="openModal('dobre_01_calculo_inverso.png')">
+          <div class="img-wrapper" onclick="openModal('dobre_01_calculo.png')">
             <span class="overlay-tag">DoBre</span>
-            <img src="dobre_01_calculo_inverso.png" alt="No adivines comisiones. <span>Fijá cuánto querés ganar</span>." loading="lazy">
+            <img src="dobre_01_calculo.png" alt="¿Cuánto querés ganar? <span>DoBre te da el precio exacto</span>." loading="lazy">
           </div>
           <div class="card-info">
             <div>
               <div class="card-variant">Variante 1 · Cálculo Inverso</div>
-              <h3 class="card-title">DoBre: No adivines comisiones. Fijá cuánto querés ganar.</h3>
+              <h3 class="card-title">DoBre: ¿Cuánto querés ganar? DoBre te da el precio exacto.</h3>
             </div>
-            <a class="download-btn" href="dobre_01_calculo_inverso.png" download="dobre_01_calculo_inverso.png">
+            <a class="download-btn" href="dobre_01_calculo.png" download="dobre_01_calculo.png">
               <span>Descargar PNG</span>
               <span>↓</span>
             </a>
@@ -413,16 +436,16 @@
         </article>
       
         <article class="flyer-card" data-project="DoBre">
-          <div class="img-wrapper" onclick="openModal('dobre_02_desglose.png')">
+          <div class="img-wrapper" onclick="openModal('dobre_02_comisiones.png')">
             <span class="overlay-tag">DoBre</span>
-            <img src="dobre_02_desglose.png" alt="Enterate de <span>cada peso que se lleva el marketplace</span>." loading="lazy">
+            <img src="dobre_02_comisiones.png" alt="Comisiones, costos fijos y <span>envíos calculados al centavo</span>." loading="lazy">
           </div>
           <div class="card-info">
             <div>
-              <div class="card-variant">Variante 2 · Desglose de Tarifas</div>
-              <h3 class="card-title">DoBre: Enterate de cada peso que se lleva el marketplace.</h3>
+              <div class="card-variant">Variante 2 · Comisiones Reales</div>
+              <h3 class="card-title">DoBre: Comisiones, costos fijos y envíos calculados al centavo.</h3>
             </div>
-            <a class="download-btn" href="dobre_02_desglose.png" download="dobre_02_desglose.png">
+            <a class="download-btn" href="dobre_02_comisiones.png" download="dobre_02_comisiones.png">
               <span>Descargar PNG</span>
               <span>↓</span>
             </a>
@@ -430,16 +453,16 @@
         </article>
       
         <article class="flyer-card" data-project="DoBre">
-          <div class="img-wrapper" onclick="openModal('dobre_03_gratuito.png')">
+          <div class="img-wrapper" onclick="openModal('dobre_03_gratis.png')">
             <span class="overlay-tag">DoBre</span>
-            <img src="dobre_03_gratuito.png" alt="Cálculos en un clic <span>sin registros ni publicidad</span>." loading="lazy">
+            <img src="dobre_03_gratis.png" alt="Cálculo en 2 segundos <span>sin registros ni publicidad</span>." loading="lazy">
           </div>
           <div class="card-info">
             <div>
-              <div class="card-variant">Variante 3 · Herramienta Libre</div>
-              <h3 class="card-title">DoBre: Cálculos en un clic sin registros ni publicidad.</h3>
+              <div class="card-variant">Variante 3 · Web & App Libre</div>
+              <h3 class="card-title">DoBre: Cálculo en 2 segundos sin registros ni publicidad.</h3>
             </div>
-            <a class="download-btn" href="dobre_03_gratuito.png" download="dobre_03_gratuito.png">
+            <a class="download-btn" href="dobre_03_gratis.png" download="dobre_03_gratis.png">
               <span>Descargar PNG</span>
               <span>↓</span>
             </a>
@@ -447,16 +470,16 @@
         </article>
       
         <article class="flyer-card" data-project="FreeSoft">
-          <div class="img-wrapper" onclick="openModal('freesoft_01_rama_libre.png')">
+          <div class="img-wrapper" onclick="openModal('freesoft_01_hub.png')">
             <span class="overlay-tag">FreeSoft</span>
-            <img src="freesoft_01_rama_libre.png" alt="Utilidades libres y nativas <span>sin dependencias en la nube</span>." loading="lazy">
+            <img src="freesoft_01_hub.png" alt="Software de escritorio libre <span>sin dependencias en la nube</span>." loading="lazy">
           </div>
           <div class="card-info">
             <div>
               <div class="card-variant">Variante 1 · Rama Open Source</div>
-              <h3 class="card-title">FreeSoft: Utilidades libres y nativas sin dependencias en la nube.</h3>
+              <h3 class="card-title">FreeSoft: Software de escritorio libre sin dependencias en la nube.</h3>
             </div>
-            <a class="download-btn" href="freesoft_01_rama_libre.png" download="freesoft_01_rama_libre.png">
+            <a class="download-btn" href="freesoft_01_hub.png" download="freesoft_01_hub.png">
               <span>Descargar PNG</span>
               <span>↓</span>
             </a>
