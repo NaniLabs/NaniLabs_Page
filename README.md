@@ -31,10 +31,11 @@ If you are developing a production application, we recommend enabling type-aware
 
 See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
 
-## DoubleLink Release Note (Beta 2.3.2)
+## DoubleLink Release Note (Beta 3.4.1)
 
 - **Project:** DoubleLink
-- **Version:** Beta 2.3.2
-- **Catalog Status:** Catálogo actualizado a Beta 2.3.2 (`version`: `2.3.2`, `status`: `Beta 2.3.2`) en `src/data/projects.json`.
-- **Public Manifest & R2 State:** Manifiesto público en Cloudflare R2 (`https://pub-e7f8fb195c3c42b59e5da4c5c345837b.r2.dev/releases.json`) actualizado y activo en v2.3.2.
-- **Scope & Features:** Suite de control remoto LAN, companion bidireccional Android ↔ Windows, portapapeles íntegro hasta 1 MiB con verificación SHA-256, Wake-on-LAN deduplicado con scheduler persistente, Edge Panel con estado reactivo y confirmación de apagado en dos toques, feedback de volumen sin encolamiento y nueva arquitectura UX en 5 destinos canónicos.
+- **Version:** Beta 3.4.1
+- **Catalog Status:** Catálogo actualizado a Beta 3.4.1 (`version`: `3.4.1`, `status`: `Beta 3.4.1`) en `src/data/projects.json`.
+- **Public Manifest & R2 State:** Manifiesto público en Cloudflare R2 (`https://pub-e7f8fb195c3c42b59e5da4c5c345837b.r2.dev/releases.json`) actualizado y activo en v3.4.1.
+- **Changelog 3.4.1:** avisos del portapapeles compartido en español claro (nombre del dispositivo y motivo traducido, sin IDs técnicos), explicación guiada cuando Android no puede guardar el portapapeles por estar la app en segundo plano o cerrada, y mensajes unificados para tiempo agotado, éxito, sin dispositivos conectados, límite de 1 MB y errores de escritura en Windows.
+- **Scope & Features:** Suite de control remoto LAN, companion bidireccional Android ↔ Windows, temporizador de audio con desvanecimiento del volumen maestro, Modos y Rutinas de Samsung, portapapeles de texto e imágenes hasta 1 MiB con verificación SHA-256, Wake-on-LAN y envío multi-archivo.
