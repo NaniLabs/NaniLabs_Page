@@ -1,27 +1,516 @@
 {
   "projects": [
-    {"id":"nanilabs","name":"NaniLabs","domain":"nanilabs.lat","url":"https://nanilabs.lat","description":"Laboratorio independiente de ingeniería de software. Herramientas de escritorio, aplicaciones multiplataforma y sistemas web.","status":"Portfolio","technologies":["Cloudflare Workers","React","TypeScript","Flutter","C++","Python"]},
-    {"id":"doublelink","name":"DoubleLink","domain":"doublelink.nanilabs.lat","url":"https://doublelink.nanilabs.lat","description":"Control remoto y companion bidireccional entre Android y Windows en red local.","status":"Beta 3.6.0","technologies":["Flutter","Dart","Kotlin","Win32"]},
-    {"id":"saas","name":"NaniLabs SaaS","domain":"saas.nanilabs.lat","url":"https://saas.nanilabs.lat","description":"Plataforma comercial multi-tenant sobre arquitectura serverless en Cloudflare.","status":"En producción","technologies":["Cloudflare Workers","Cloudflare D1","React","TypeScript","Node.js","Tailwind CSS"]},
-    {"id":"dobre","name":"DoBre","domain":"dobre.nanilabs.lat","url":"https://dobre.nanilabs.lat","description":"Calculadora de precios y comisiones para vendedores de Mercado Libre Argentina.","status":"Finalizado","technologies":["Flutter","Dart"]},
-    {"id":"freesoft","name":"FreeSoft","domain":"github.com/NaniLabs/FreeSoft","url":"https://github.com/NaniLabs/FreeSoft","description":"Utilidades de escritorio para Windows: Aquamarine gestiona inventario, ventas y reparaciones; OrganEyes ordena archivos por tipo.","status":"Open Source","technologies":["C++","Qt","SQLite","Python","PyQt"]}
+    {
+      "id": "nanilabs",
+      "name": "NaniLabs & CEO",
+      "domain": "nanilabs.lat · ceo.nanilabs.lat",
+      "url": "https://nanilabs.lat",
+      "description": "Laboratorio independiente de software y perfil profesional de su fundador, Ignacio Exequiel Meoniz, estudiante de Sistemas en UADER y desarrollador.",
+      "status": "Portfolio",
+      "technologies": [
+        "Cloudflare Workers",
+        "React",
+        "TypeScript",
+        "Flutter",
+        "C++",
+        "Python"
+      ]
+    },
+    {
+      "id": "doublelink",
+      "name": "DoubleLink",
+      "domain": "doublelink.nanilabs.lat",
+      "url": "https://doublelink.nanilabs.lat",
+      "description": "Control remoto y companion Android ↔ Windows por LAN, sin nube.",
+      "status": "Beta 3.6.0",
+      "technologies": [
+        "Flutter",
+        "Dart",
+        "Kotlin",
+        "Win32"
+      ]
+    },
+    {
+      "id": "saas",
+      "name": "NaniLabs SaaS",
+      "domain": "saas.nanilabs.lat",
+      "url": "https://saas.nanilabs.lat",
+      "description": "Plataforma comercial multi-tenant en Cloudflare Workers y D1 SQLite. CRM Servicio Técnico en producción.",
+      "status": "En producción",
+      "technologies": [
+        "Cloudflare Workers",
+        "Cloudflare D1",
+        "React",
+        "TypeScript",
+        "Node.js",
+        "Tailwind CSS"
+      ]
+    },
+    {
+      "id": "dobre",
+      "name": "DoBre",
+      "domain": "dobre.nanilabs.lat",
+      "url": "https://dobre.nanilabs.lat",
+      "description": "Calculadora inversa de precios y comisiones para Mercado Libre Argentina.",
+      "status": "v1.0.1 · Hackatón OpenAI 2026",
+      "technologies": [
+        "Flutter",
+        "Dart"
+      ]
+    },
+    {
+      "id": "freesoft",
+      "name": "FreeSoft",
+      "domain": "github.com/NaniLabs/FreeSoft",
+      "url": "https://github.com/NaniLabs/FreeSoft",
+      "description": "Suite Open Source offline para Windows: Aquamarine gestiona inventario, ventas y reparaciones; OrganEyes organiza archivos automáticamente.",
+      "status": "Open Source",
+      "technologies": [
+        "C++",
+        "Qt",
+        "SQLite",
+        "Python",
+        "PyQt"
+      ]
+    }
   ],
-  "variants": ["01 · Panorama","02 · Ficha técnica","03 · Módulos"],
+  "variants": [
+    "01 · Panorama",
+    "02 · Ficha técnica",
+    "03 · Módulos"
+  ],
   "flyers": [
-    {"id":"nanilabs_01_hub","project":"nanilabs","name":"NaniLabs","variant":1,"summary":"Herramientas locales, software multiplataforma y sistemas web.","title":"Ingeniería de software aplicada","items":[["01","Sistemas web","Plataformas comerciales en Cloudflare."],["02","Aplicaciones multiplataforma","Herramientas para Android y Windows."],["03","Cálculo financiero","DoBre estima precios de publicación."],["04","Utilidades de escritorio","Aquamarine y OrganEyes para Windows."]] ,"logo":"nanilabs"},
-    {"id":"nanilabs_02_card","project":"nanilabs","name":"NaniLabs","variant":2,"summary":"Laboratorio independiente de ingeniería de software.","rows":[["Especialidad","Software y sistemas web"],["Plataformas","Web · Android · Windows"],["Tecnologías","Cloudflare · React · Flutter"],["Estado","Portfolio de proyectos"]],"logo":"nanilabs"},
-    {"id":"nanilabs_03_ficha","project":"nanilabs","name":"NaniLabs","variant":3,"summary":"Proyectos de software para web, escritorio y móvil.","title":"Proyectos en desarrollo y publicados","modules":[["Sistemas web","Plataformas comerciales multi-tenant en Cloudflare."],["Apps multiplataforma","DoubleLink conecta Android y Windows por LAN."],["Software local","Aquamarine y OrganEyes funcionan en Windows."]],"logo":"nanilabs"},
-    {"id":"doublelink_01_editorial","project":"doublelink","name":"DoubleLink","variant":1,"summary":"Control remoto Android ↔ Windows en red local.","title":"El teléfono y la PC, en la misma red","items":[["01","Conexión local","Wi-Fi o Ethernet, sin nube."],["02","Archivos y portapapeles","Transferencia multi-archivo y portapapeles compartido."],["03","Control de PC","Control remoto y PC Windows como Router Hub."],["04","Audio y acceso","Temporizador con desvanecimiento y Wake-on-LAN."]],"logo":"doublelink"},
-    {"id":"doublelink_02_card","project":"doublelink","name":"DoubleLink","variant":2,"summary":"Companion bidireccional para Android y Windows.","rows":[["Versión","3.6.0 · Beta 3.6.0"],["Plataformas","Android ↔ Windows"],["Conexión","Wi-Fi / Ethernet · LAN"],["Stack","Flutter · Dart · Kotlin · Win32"]],"logo":"doublelink"},
-    {"id":"doublelink_03_ficha","project":"doublelink","name":"DoubleLink","variant":3,"summary":"Funciones conectadas por red local.","title":"Control y transferencia por LAN","modules":[["Compartir archivos","Envío de varios archivos entre dispositivos."],["Portapapeles compartido","Sincroniza texto e imágenes en la red local."],["Control de audio","Temporizador y desvanecimiento gradual del volumen maestro."]],"logo":"doublelink"},
-    {"id":"saas_01_editorial","project":"saas","name":"NaniLabs SaaS","variant":1,"summary":"Plataforma comercial multi-tenant en Cloudflare.","title":"Sistemas comerciales en la nube","items":[["01","Aplicaciones web","Interfaces con React y TypeScript."],["02","Arquitectura serverless","Ejecución sobre Cloudflare Workers."],["03","Datos comerciales","Persistencia con Cloudflare D1."],["04","Multi-tenant","Una plataforma comercial para distintos negocios."]],"logo":"saas"},
-    {"id":"saas_02_card","project":"saas","name":"NaniLabs SaaS","variant":2,"summary":"Arquitectura y tecnologías de la plataforma.","rows":[["Estado","En producción"],["Ejecución","Cloudflare Workers"],["Base de datos","Cloudflare D1"],["Stack web","React · TypeScript · Node.js"]],"logo":"saas"},
-    {"id":"saas_03_ficha","project":"saas","name":"NaniLabs SaaS","variant":3,"summary":"Plataforma comercial adaptable a cada negocio.","title":"Aplicaciones comerciales multi-tenant","modules":[["Arquitectura","Servicios serverless sobre Cloudflare."],["Aplicaciones web","Desarrollo con React y TypeScript."],["Datos","Base de datos Cloudflare D1."]],"logo":"saas"},
-    {"id":"dobre_01_editorial","project":"dobre","name":"DoBre","variant":1,"summary":"Calculadora de precios y comisiones para Mercado Libre.","title":"Calculá el precio de publicación","items":[["01","Precio objetivo","Estimación según el neto que querés recibir."],["02","Cálculo inverso","Calcula cuánto publicar para alcanzar ese monto."],["03","Tipos de publicación","Comparativa entre Clásica y Premium."],["04","Costos","Considera comisiones, impuestos y envíos."]],"logo":"dobre"},
-    {"id":"dobre_02_card","project":"dobre","name":"DoBre","variant":2,"summary":"Ficha de la calculadora de precios.","rows":[["Estado","Finalizado"],["Uso","Web · Acceso libre"],["Registro","No requiere"],["Stack","Flutter · Dart"]],"logo":"dobre"},
-    {"id":"dobre_03_ficha","project":"dobre","name":"DoBre","variant":3,"summary":"Cálculo inverso para estimar el precio de venta.","title":"Del neto deseado al precio publicado","modules":[["Monto neto","Indicá cuánto querés recibir."],["Comisión y costos","Considera tipo de publicación, impuestos y envíos."],["Precio de venta","Estima el precio que necesitás publicar."]],"logo":"dobre"},
-    {"id":"freesoft_01_editorial","project":"freesoft","name":"FreeSoft","variant":1,"summary":"Utilidades de escritorio para Windows.","title":"Herramientas locales para Windows","items":[["01","Aquamarine","Gestión de inventario, ventas y reparaciones."],["02","OrganEyes","Organiza archivos por extensión y tipo."],["03","Ejecución local","Utilidades de escritorio para Windows."],["04","Código abierto","Proyectos publicados en GitHub."]],"logo":"aquamarine"},
-    {"id":"freesoft_02_aquamarine","project":"freesoft","name":"Aquamarine","variant":2,"summary":"Gestión local de inventario, ventas y reparaciones.","rows":[["Estado","Finalizado"],["Plataforma","Windows · local"],["Stack","C++ · Qt · SQLite"],["Repositorio","NaniLabs / FreeSoft"]],"logo":"aquamarine"},
-    {"id":"freesoft_03_organeyes","project":"freesoft","name":"OrganEyes","variant":3,"summary":"Organizador de archivos para Windows.","title":"Ordená archivos por tipo","modules":[["Clasificación","Organiza archivos según extensión y tipo."],["Carpetas","Ordena Descargas, Escritorio y otras carpetas."],["Tecnologías","Aplicación de Windows con Python y PyQt."]],"logo":"organeyes"}
+    {
+      "id": "nanilabs_01_hub",
+      "project": "nanilabs",
+      "name": "NaniLabs & CEO",
+      "variant": 1,
+      "summary": "Laboratorio independiente y perfil de su fundador.",
+      "title": "Software con visión propia",
+      "items": [
+        [
+          "01",
+          "NaniLabs",
+          "Software para web, escritorio y móvil."
+        ],
+        [
+          "02",
+          "Ignacio Exequiel Meoniz",
+          "Fundador, desarrollador y estudiante de Sistemas en UADER."
+        ],
+        [
+          "03",
+          "Proyectos",
+          "Herramientas, plataformas y soluciones aplicadas."
+        ],
+        [
+          "04",
+          "Perfil profesional",
+          "Conocé su trayectoria y CV en ceo.nanilabs.lat."
+        ]
+      ],
+      "logo": "nanilabs"
+    },
+    {
+      "id": "nanilabs_02_card",
+      "project": "nanilabs",
+      "name": "NaniLabs & CEO",
+      "variant": 2,
+      "summary": "Laboratorio de software y perfil profesional del fundador.",
+      "rows": [
+        [
+          "Laboratorio",
+          "NaniLabs · software independiente"
+        ],
+        [
+          "Fundador",
+          "Ignacio Exequiel Meoniz"
+        ],
+        [
+          "Formación",
+          "Estudiante de Sistemas · UADER"
+        ],
+        [
+          "Perfil",
+          "Desarrollador · trayectoria y CV"
+        ],
+        [
+          "Sitios",
+          "nanilabs.lat · ceo.nanilabs.lat"
+        ]
+      ],
+      "logo": "nanilabs"
+    },
+    {
+      "id": "nanilabs_03_ficha",
+      "project": "nanilabs",
+      "name": "NaniLabs & CEO",
+      "variant": 3,
+      "summary": "Software y desarrollo desde NaniLabs y su fundador.",
+      "title": "Un laboratorio. Una trayectoria.",
+      "modules": [
+        [
+          "Laboratorio",
+          "Proyectos de software para web, escritorio y móvil."
+        ],
+        [
+          "Fundador",
+          "Ignacio Exequiel Meoniz, desarrollador y estudiante de Sistemas en UADER."
+        ],
+        [
+          "Perfil y CV",
+          "Conocé su trayectoria en ceo.nanilabs.lat."
+        ]
+      ],
+      "logo": "nanilabs"
+    },
+    {
+      "id": "doublelink_01_editorial",
+      "project": "doublelink",
+      "name": "DoubleLink",
+      "variant": 1,
+      "summary": "Companion y control remoto Android ↔ Windows por LAN, sin nube.",
+      "title": "El teléfono y la PC, en la misma red",
+      "items": [
+        [
+          "01",
+          "Conexión local",
+          "Android ↔ Windows, sin nube; PC como Router Hub."
+        ],
+        [
+          "02",
+          "Archivos y portapapeles",
+          "Envío multi-archivo gigabit y verificación SHA-256."
+        ],
+        [
+          "03",
+          "Audio",
+          "Temporizador con desvanecimiento del volumen maestro."
+        ],
+        [
+          "04",
+          "Control y automatización",
+          "Modos y Rutinas de Samsung, Wake-on-LAN y SoundSwitch."
+        ]
+      ],
+      "logo": "doublelink"
+    },
+    {
+      "id": "doublelink_02_card",
+      "project": "doublelink",
+      "name": "DoubleLink",
+      "variant": 2,
+      "summary": "Companion LAN y control remoto sin nube.",
+      "rows": [
+        [
+          "Versión",
+          "3.6.0 · Beta 3.6.0"
+        ],
+        [
+          "Dispositivos",
+          "Android ↔ Windows · LAN"
+        ],
+        [
+          "Archivos",
+          "Multi-archivo gigabit"
+        ],
+        [
+          "Portapapeles",
+          "Compartido · verificación SHA-256"
+        ],
+        [
+          "Audio",
+          "Temporizador · volumen maestro"
+        ],
+        [
+          "Integraciones",
+          "Samsung · Wake-on-LAN · SoundSwitch"
+        ],
+        [
+          "Red",
+          "PC Windows como Router Hub"
+        ]
+      ],
+      "logo": "doublelink"
+    },
+    {
+      "id": "doublelink_03_ficha",
+      "project": "doublelink",
+      "name": "DoubleLink",
+      "variant": 3,
+      "summary": "Transferencia, audio y control conectados por LAN.",
+      "title": "Control y transferencia por LAN",
+      "modules": [
+        [
+          "Archivos y portapapeles",
+          "Multi-archivo gigabit y portapapeles con verificación SHA-256."
+        ],
+        [
+          "Audio",
+          "Temporizador con desvanecimiento gradual del volumen maestro."
+        ],
+        [
+          "Control y red",
+          "Router Hub, Wake-on-LAN, SoundSwitch y Modos y Rutinas de Samsung."
+        ]
+      ],
+      "logo": "doublelink"
+    },
+    {
+      "id": "saas_01_editorial",
+      "project": "saas",
+      "name": "NaniLabs SaaS",
+      "variant": 1,
+      "summary": "Plataforma comercial multi-tenant en Cloudflare.",
+      "title": "Sistemas comerciales en la nube",
+      "items": [
+        [
+          "01",
+          "Multi-tenant",
+          "Una plataforma comercial para distintos negocios."
+        ],
+        [
+          "02",
+          "Cloudflare Workers",
+          "Ejecución serverless y datos en D1 SQLite."
+        ],
+        [
+          "03",
+          "Caso en producción",
+          "CRM Servicio Técnico: crm.saas.nanilabs.lat."
+        ],
+        [
+          "04",
+          "Administración",
+          "Gestión en admin.saas.nanilabs.lat."
+        ]
+      ],
+      "logo": "saas"
+    },
+    {
+      "id": "saas_02_card",
+      "project": "saas",
+      "name": "NaniLabs SaaS",
+      "variant": 2,
+      "summary": "Arquitectura y tecnologías de la plataforma.",
+      "rows": [
+        [
+          "Estado",
+          "CRM Servicio Técnico en producción"
+        ],
+        [
+          "Arquitectura",
+          "Multi-tenant · Cloudflare Workers"
+        ],
+        [
+          "Datos",
+          "D1 SQLite · R2"
+        ],
+        [
+          "CRM",
+          "crm.saas.nanilabs.lat"
+        ],
+        [
+          "Administración",
+          "admin.saas.nanilabs.lat"
+        ]
+      ],
+      "logo": "saas"
+    },
+    {
+      "id": "saas_03_ficha",
+      "project": "saas",
+      "name": "NaniLabs SaaS",
+      "variant": 3,
+      "summary": "Plataforma comercial adaptable a cada negocio.",
+      "title": "Aplicaciones comerciales multi-tenant",
+      "modules": [
+        [
+          "Plataforma",
+          "Arquitectura multi-tenant con Workers y D1 SQLite."
+        ],
+        [
+          "CRM Servicio Técnico",
+          "Caso real en producción: crm.saas.nanilabs.lat."
+        ],
+        [
+          "Administración",
+          "Gestión comercial en admin.saas.nanilabs.lat."
+        ]
+      ],
+      "logo": "saas"
+    },
+    {
+      "id": "dobre_01_editorial",
+      "project": "dobre",
+      "name": "DoBre",
+      "variant": 1,
+      "summary": "Calculadora de precios para Mercado Libre Argentina.",
+      "title": "Calculá el precio de publicación",
+      "items": [
+        [
+          "01",
+          "Neto deseado",
+          "Partí del monto que querés recibir."
+        ],
+        [
+          "02",
+          "Motor inverso",
+          "Búsqueda binaria del precio de publicación."
+        ],
+        [
+          "03",
+          "Comisiones",
+          "Compará publicaciones Clásica y Premium."
+        ],
+        [
+          "04",
+          "Costos",
+          "Incluye escala de costos fijos y envíos."
+        ]
+      ],
+      "logo": "dobre"
+    },
+    {
+      "id": "dobre_02_card",
+      "project": "dobre",
+      "name": "DoBre",
+      "variant": 2,
+      "summary": "Calculadora inversa de precios para Mercado Libre Argentina.",
+      "rows": [
+        [
+          "Versión",
+          "1.0.1 · Hackatón OpenAI 2026"
+        ],
+        [
+          "Mercado",
+          "Mercado Libre Argentina"
+        ],
+        [
+          "Motor",
+          "Cálculo inverso · búsqueda binaria"
+        ],
+        [
+          "Comisiones",
+          "Clásica y Premium"
+        ],
+        [
+          "Costos",
+          "Escala de costos fijos y envíos"
+        ]
+      ],
+      "logo": "dobre"
+    },
+    {
+      "id": "dobre_03_ficha",
+      "project": "dobre",
+      "name": "DoBre",
+      "variant": 3,
+      "summary": "Cálculo inverso para estimar el precio de venta.",
+      "title": "Del neto deseado al precio publicado",
+      "modules": [
+        [
+          "Monto neto",
+          "Indicá cuánto querés recibir."
+        ],
+        [
+          "Motor inverso",
+          "Búsqueda binaria con comisiones Clásica y Premium."
+        ],
+        [
+          "Costos",
+          "Considera escala de costos fijos y envíos."
+        ]
+      ],
+      "logo": "dobre"
+    },
+    {
+      "id": "freesoft_01_editorial",
+      "project": "freesoft",
+      "name": "FreeSoft",
+      "variant": 1,
+      "summary": "Suite libre y offline para Windows.",
+      "title": "Herramientas locales para Windows",
+      "items": [
+        [
+          "01",
+          "Aquamarine",
+          "Inventario, ventas y reparaciones locales."
+        ],
+        [
+          "02",
+          "OrganEyes",
+          "Organización automática de archivos por tipo."
+        ],
+        [
+          "03",
+          "Sin conexión",
+          "Software Windows offline, sin nube."
+        ],
+        [
+          "04",
+          "Código abierto",
+          "Sin publicidad ni suscripciones."
+        ]
+      ],
+      "logo": "aquamarine"
+    },
+    {
+      "id": "freesoft_02_aquamarine",
+      "project": "freesoft",
+      "name": "FreeSoft",
+      "variant": 2,
+      "summary": "Aquamarine y OrganEyes: software libre offline para Windows.",
+      "rows": [
+        [
+          "Plataforma",
+          "Windows · 100% offline"
+        ],
+        [
+          "Aquamarine",
+          "Inventario, ventas y reparaciones"
+        ],
+        [
+          "Tecnología",
+          "C++ · Qt · SQLite"
+        ],
+        [
+          "OrganEyes",
+          "Organización automática de archivos"
+        ],
+        [
+          "Tecnología",
+          "Python · PyQt"
+        ],
+        [
+          "Modelo",
+          "Open Source · sin suscripciones"
+        ]
+      ],
+      "logo": "aquamarine"
+    },
+    {
+      "id": "freesoft_03_organeyes",
+      "project": "freesoft",
+      "name": "FreeSoft",
+      "variant": 3,
+      "summary": "Dos aplicaciones libres para trabajar y organizar archivos.",
+      "title": "Una suite. Dos herramientas.",
+      "modules": [
+        [
+          "Aquamarine",
+          "Inventario, ventas y reparaciones con C++ · Qt · SQLite."
+        ],
+        [
+          "OrganEyes",
+          "Orden automático de archivos con Python · PyQt."
+        ],
+        [
+          "Software libre",
+          "Windows offline, sin nube, publicidad ni suscripciones."
+        ]
+      ],
+      "logo": "organeyes"
+    }
   ]
 }
