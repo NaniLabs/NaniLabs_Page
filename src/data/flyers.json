@@ -2,33 +2,21 @@
   "projects": [
     {
       "id": "nanilabs",
-      "name": "NaniLabs & CEO",
-      "domain": "nanilabs.lat · ceo.nanilabs.lat",
+      "name": "NaniLabs",
+      "domain": "nanilabs.lat",
       "url": "https://nanilabs.lat",
-      "description": "Laboratorio independiente de software y perfil profesional de su fundador, Ignacio Exequiel Meoniz, estudiante de Sistemas en UADER y desarrollador.",
+      "description": "Laboratorio independiente de desarrollo de software: aplicaciones multiplataforma, sistemas web y herramientas de escritorio.",
       "status": "Portfolio",
-      "technologies": [
-        "Cloudflare Workers",
-        "React",
-        "TypeScript",
-        "Flutter",
-        "C++",
-        "Python"
-      ]
+      "technologies": ["Cloudflare Workers", "React", "TypeScript", "Flutter", "C++", "Python"]
     },
     {
       "id": "doublelink",
       "name": "DoubleLink",
       "domain": "doublelink.nanilabs.lat",
       "url": "https://doublelink.nanilabs.lat",
-      "description": "Control remoto y companion Android ↔ Windows por LAN, sin nube.",
+      "description": "Control remoto y companion bidireccional entre Android y Windows en red local, sin nube.",
       "status": "Beta 3.6.0",
-      "technologies": [
-        "Flutter",
-        "Dart",
-        "Kotlin",
-        "Win32"
-      ]
+      "technologies": ["Flutter", "Dart", "Kotlin", "Win32"]
     },
     {
       "id": "saas",
@@ -37,41 +25,25 @@
       "url": "https://saas.nanilabs.lat",
       "description": "Plataforma comercial multi-tenant en Cloudflare Workers y D1 SQLite. CRM Servicio Técnico en producción.",
       "status": "En producción",
-      "technologies": [
-        "Cloudflare Workers",
-        "Cloudflare D1",
-        "React",
-        "TypeScript",
-        "Node.js",
-        "Tailwind CSS"
-      ]
+      "technologies": ["Cloudflare Workers", "Cloudflare D1", "React", "TypeScript", "Node.js", "Tailwind CSS"]
     },
     {
       "id": "dobre",
       "name": "DoBre",
       "domain": "dobre.nanilabs.lat",
       "url": "https://dobre.nanilabs.lat",
-      "description": "Calculadora inversa de precios y comisiones para Mercado Libre Argentina.",
-      "status": "v1.0.1 · Hackatón OpenAI 2026",
-      "technologies": [
-        "Flutter",
-        "Dart"
-      ]
+      "description": "Calculadora inversa de precios y comisiones para vendedores de Mercado Libre Argentina.",
+      "status": "v1.0.1",
+      "technologies": ["Flutter", "Dart"]
     },
     {
       "id": "freesoft",
       "name": "FreeSoft",
       "domain": "github.com/NaniLabs/FreeSoft",
       "url": "https://github.com/NaniLabs/FreeSoft",
-      "description": "Suite Open Source offline para Windows: Aquamarine gestiona inventario, ventas y reparaciones; OrganEyes organiza archivos automáticamente.",
+      "description": "Suite Open Source offline para Windows: Aquamarine (stock y taller) y OrganEyes (organizador de archivos).",
       "status": "Open Source",
-      "technologies": [
-        "C++",
-        "Qt",
-        "SQLite",
-        "Python",
-        "PyQt"
-      ]
+      "technologies": ["C++", "Qt", "SQLite", "Python", "PyQt"]
     }
   ],
   "variants": [
@@ -83,62 +55,36 @@
     {
       "id": "nanilabs_01_hub",
       "project": "nanilabs",
-      "name": "NaniLabs & CEO",
+      "name": "NaniLabs",
       "variant": 1,
-      "summary": "Laboratorio independiente y perfil de su fundador.",
-      "title": "Software con visión propia",
+      "layout": "A",
+      "summary": "Software, herramientas locales y web.",
+      "meta": "Portfolio & Proyectos",
+      "subtitle": "Software, herramientas locales y web",
       "items": [
-        [
-          "01",
-          "NaniLabs",
-          "Software para web, escritorio y móvil."
-        ],
-        [
-          "02",
-          "Ignacio Exequiel Meoniz",
-          "Fundador, desarrollador y estudiante de Sistemas en UADER."
-        ],
-        [
-          "03",
-          "Proyectos",
-          "Herramientas, plataformas y soluciones aplicadas."
-        ],
-        [
-          "04",
-          "Perfil profesional",
-          "Conocé su trayectoria y CV en ceo.nanilabs.lat."
-        ]
+        "DoubleLink",
+        "NaniLabs SaaS",
+        "DoBre",
+        "FreeSoft"
       ],
+      "domain": "nanilabs.lat",
       "logo": "nanilabs"
     },
     {
       "id": "nanilabs_02_card",
       "project": "nanilabs",
-      "name": "NaniLabs & CEO",
+      "name": "NaniLabs",
       "variant": 2,
-      "summary": "Laboratorio de software y perfil profesional del fundador.",
+      "layout": "B",
+      "summary": "Desarrollo de software y sistemas.",
+      "meta": "nanilabs.lat",
+      "subtitle": "Desarrollo de software",
       "rows": [
-        [
-          "Laboratorio",
-          "NaniLabs · software independiente"
-        ],
-        [
-          "Fundador",
-          "Ignacio Exequiel Meoniz"
-        ],
-        [
-          "Formación",
-          "Estudiante de Sistemas · UADER"
-        ],
-        [
-          "Perfil",
-          "Desarrollador · trayectoria y CV"
-        ],
-        [
-          "Sitios",
-          "nanilabs.lat · ceo.nanilabs.lat"
-        ]
+        ["Web & Cloud", "Cloudflare · React · TypeScript"],
+        ["Red Local", "Flutter · Dart · Win32"],
+        ["FreeSoft", "C++ · Qt · Python"]
       ],
+      "domain": "nanilabs.lat",
       "logo": "nanilabs"
     },
     {
@@ -146,22 +92,28 @@
       "project": "nanilabs",
       "name": "NaniLabs & CEO",
       "variant": 3,
-      "summary": "Software y desarrollo desde NaniLabs y su fundador.",
-      "title": "Un laboratorio. Una trayectoria.",
-      "modules": [
-        [
-          "Laboratorio",
-          "Proyectos de software para web, escritorio y móvil."
-        ],
-        [
-          "Fundador",
-          "Ignacio Exequiel Meoniz, desarrollador y estudiante de Sistemas en UADER."
-        ],
-        [
-          "Perfil y CV",
-          "Conocé su trayectoria en ceo.nanilabs.lat."
-        ]
+      "layout": "D",
+      "summary": "Laboratorio web y portfolio personal en un flyer.",
+      "meta": "Web & Portfolio",
+      "title": "NaniLabs",
+      "subtitle": "Laboratorio y portfolio personal",
+      "split": [
+        {
+          "logo": "nanilabs",
+          "name": "nanilabs.lat",
+          "badge": "Web & Apps",
+          "desc": "Laboratorio de software y proyectos",
+          "sub": "DoubleLink · SaaS · DoBre · FreeSoft"
+        },
+        {
+          "logo": "nanilabs",
+          "name": "ceo.nanilabs.lat",
+          "badge": "Portfolio & CV",
+          "desc": "Ignacio Meoniz · Desarrollador",
+          "sub": "Proyectos, arquitectura de software y contacto"
+        }
       ],
+      "domain": "nanilabs.lat · ceo.nanilabs.lat",
       "logo": "nanilabs"
     },
     {
@@ -169,30 +121,17 @@
       "project": "doublelink",
       "name": "DoubleLink",
       "variant": 1,
-      "summary": "Companion y control remoto Android ↔ Windows por LAN, sin nube.",
-      "title": "El teléfono y la PC, en la misma red",
+      "layout": "A",
+      "summary": "Control remoto y companion Android ↔ Windows.",
+      "meta": "Android · Windows",
+      "subtitle": "Control remoto en red local",
       "items": [
-        [
-          "01",
-          "Conexión local",
-          "Android ↔ Windows, sin nube; PC como Router Hub."
-        ],
-        [
-          "02",
-          "Archivos y portapapeles",
-          "Envío multi-archivo gigabit y verificación SHA-256."
-        ],
-        [
-          "03",
-          "Audio",
-          "Temporizador con desvanecimiento del volumen maestro."
-        ],
-        [
-          "04",
-          "Control y automatización",
-          "Modos y Rutinas de Samsung, Wake-on-LAN y SoundSwitch."
-        ]
+        "Envío de archivos LAN",
+        "Temporizador gradual",
+        "Modos y Rutinas Samsung",
+        "PC como Router Hub"
       ],
+      "domain": "doublelink.nanilabs.lat",
       "logo": "doublelink"
     },
     {
@@ -200,37 +139,16 @@
       "project": "doublelink",
       "name": "DoubleLink",
       "variant": 2,
-      "summary": "Companion LAN y control remoto sin nube.",
+      "layout": "B",
+      "summary": "Ficha técnica de conectividad y funciones.",
+      "meta": "Versión 3.6.0 · Beta 3.6.0",
+      "subtitle": "Android ↔ Windows por LAN",
       "rows": [
-        [
-          "Versión",
-          "3.6.0 · Beta 3.6.0"
-        ],
-        [
-          "Dispositivos",
-          "Android ↔ Windows · LAN"
-        ],
-        [
-          "Archivos",
-          "Multi-archivo gigabit"
-        ],
-        [
-          "Portapapeles",
-          "Compartido · verificación SHA-256"
-        ],
-        [
-          "Audio",
-          "Temporizador · volumen maestro"
-        ],
-        [
-          "Integraciones",
-          "Samsung · Wake-on-LAN · SoundSwitch"
-        ],
-        [
-          "Red",
-          "PC Windows como Router Hub"
-        ]
+        ["Conexión", "Wi-Fi / Ethernet · Sin nube"],
+        ["Archivos", "Multi-archivo gigabit · SHA-256"],
+        ["Audio & Control", "Temporizador · SoundSwitch · WOL"]
       ],
+      "domain": "doublelink.nanilabs.lat",
       "logo": "doublelink"
     },
     {
@@ -238,22 +156,16 @@
       "project": "doublelink",
       "name": "DoubleLink",
       "variant": 3,
-      "summary": "Transferencia, audio y control conectados por LAN.",
-      "title": "Control y transferencia por LAN",
+      "layout": "C",
+      "summary": "Conexión directa entre teléfono y PC.",
+      "meta": "Red local · Sin nube",
+      "statement": "Conexión directa entre teléfono y PC",
       "modules": [
-        [
-          "Archivos y portapapeles",
-          "Multi-archivo gigabit y portapapeles con verificación SHA-256."
-        ],
-        [
-          "Audio",
-          "Temporizador con desvanecimiento gradual del volumen maestro."
-        ],
-        [
-          "Control y red",
-          "Router Hub, Wake-on-LAN, SoundSwitch y Modos y Rutinas de Samsung."
-        ]
+        "Transferencia multi-archivo gigabit",
+        "Portapapeles con verificación SHA-256",
+        "Audio PC con desvanecimiento gradual"
       ],
+      "domain": "doublelink.nanilabs.lat",
       "logo": "doublelink"
     },
     {
@@ -261,30 +173,17 @@
       "project": "saas",
       "name": "NaniLabs SaaS",
       "variant": 1,
+      "layout": "A",
       "summary": "Plataforma comercial multi-tenant en Cloudflare.",
-      "title": "Sistemas comerciales en la nube",
+      "meta": "Cloudflare Edge",
+      "subtitle": "Sistemas comerciales en la nube",
       "items": [
-        [
-          "01",
-          "Multi-tenant",
-          "Una plataforma comercial para distintos negocios."
-        ],
-        [
-          "02",
-          "Cloudflare Workers",
-          "Ejecución serverless y datos en D1 SQLite."
-        ],
-        [
-          "03",
-          "Caso en producción",
-          "CRM Servicio Técnico: crm.saas.nanilabs.lat."
-        ],
-        [
-          "04",
-          "Administración",
-          "Gestión en admin.saas.nanilabs.lat."
-        ]
+        "Catálogo y pedidos",
+        "Control de stock",
+        "CRM Servicio Técnico",
+        "Mercado Pago"
       ],
+      "domain": "saas.nanilabs.lat",
       "logo": "saas"
     },
     {
@@ -292,29 +191,16 @@
       "project": "saas",
       "name": "NaniLabs SaaS",
       "variant": 2,
-      "summary": "Arquitectura y tecnologías de la plataforma.",
+      "layout": "B",
+      "summary": "Arquitectura y tecnologías en producción.",
+      "meta": "En producción",
+      "subtitle": "Plataforma comercial web",
       "rows": [
-        [
-          "Estado",
-          "CRM Servicio Técnico en producción"
-        ],
-        [
-          "Arquitectura",
-          "Multi-tenant · Cloudflare Workers"
-        ],
-        [
-          "Datos",
-          "D1 SQLite · R2"
-        ],
-        [
-          "CRM",
-          "crm.saas.nanilabs.lat"
-        ],
-        [
-          "Administración",
-          "admin.saas.nanilabs.lat"
-        ]
+        ["Infraestructura", "Cloudflare Workers (Edge)"],
+        ["Base de datos", "Cloudflare D1 SQLite"],
+        ["Caso real", "crm.saas.nanilabs.lat"]
       ],
+      "domain": "saas.nanilabs.lat",
       "logo": "saas"
     },
     {
@@ -322,22 +208,16 @@
       "project": "saas",
       "name": "NaniLabs SaaS",
       "variant": 3,
-      "summary": "Plataforma comercial adaptable a cada negocio.",
-      "title": "Aplicaciones comerciales multi-tenant",
+      "layout": "C",
+      "summary": "Gestión comercial y servicio técnico.",
+      "meta": "Multi-Tenant",
+      "statement": "Gestión comercial y servicio técnico",
       "modules": [
-        [
-          "Plataforma",
-          "Arquitectura multi-tenant con Workers y D1 SQLite."
-        ],
-        [
-          "CRM Servicio Técnico",
-          "Caso real en producción: crm.saas.nanilabs.lat."
-        ],
-        [
-          "Administración",
-          "Gestión comercial en admin.saas.nanilabs.lat."
-        ]
+        "Tienda web e inventario online",
+        "Órdenes de servicio y reparaciones",
+        "Cobros con Mercado Pago Checkout Pro"
       ],
+      "domain": "saas.nanilabs.lat",
       "logo": "saas"
     },
     {
@@ -345,30 +225,17 @@
       "project": "dobre",
       "name": "DoBre",
       "variant": 1,
-      "summary": "Calculadora de precios para Mercado Libre Argentina.",
-      "title": "Calculá el precio de publicación",
+      "layout": "A",
+      "summary": "Calculadora de precios para Mercado Libre.",
+      "meta": "Mercado Libre Argentina",
+      "subtitle": "Calculadora de precios y comisiones",
       "items": [
-        [
-          "01",
-          "Neto deseado",
-          "Partí del monto que querés recibir."
-        ],
-        [
-          "02",
-          "Motor inverso",
-          "Búsqueda binaria del precio de publicación."
-        ],
-        [
-          "03",
-          "Comisiones",
-          "Compará publicaciones Clásica y Premium."
-        ],
-        [
-          "04",
-          "Costos",
-          "Incluye escala de costos fijos y envíos."
-        ]
+        "Cálculo inverso binario",
+        "Clásica y Premium",
+        "Escala de costo fijo",
+        "Impuestos y envíos"
       ],
+      "domain": "dobre.nanilabs.lat",
       "logo": "dobre"
     },
     {
@@ -376,29 +243,16 @@
       "project": "dobre",
       "name": "DoBre",
       "variant": 2,
-      "summary": "Calculadora inversa de precios para Mercado Libre Argentina.",
+      "layout": "B",
+      "summary": "Simulador de comisiones y publicación.",
+      "meta": "Versión 1.0.1 · Hackatón OpenAI",
+      "subtitle": "Simulador de publicaciones",
       "rows": [
-        [
-          "Versión",
-          "1.0.1 · Hackatón OpenAI 2026"
-        ],
-        [
-          "Mercado",
-          "Mercado Libre Argentina"
-        ],
-        [
-          "Motor",
-          "Cálculo inverso · búsqueda binaria"
-        ],
-        [
-          "Comisiones",
-          "Clásica y Premium"
-        ],
-        [
-          "Costos",
-          "Escala de costos fijos y envíos"
-        ]
+        ["Motor", "Cálculo inverso por búsqueda binaria"],
+        ["Publicación", "Clásica y Premium"],
+        ["Acceso", "Gratis · Sin registro requerido"]
       ],
+      "domain": "dobre.nanilabs.lat",
       "logo": "dobre"
     },
     {
@@ -406,22 +260,16 @@
       "project": "dobre",
       "name": "DoBre",
       "variant": 3,
-      "summary": "Cálculo inverso para estimar el precio de venta.",
-      "title": "Del neto deseado al precio publicado",
+      "layout": "C",
+      "summary": "Del monto neto al precio de publicación.",
+      "meta": "Web & App",
+      "statement": "Del monto neto al precio de publicación",
       "modules": [
-        [
-          "Monto neto",
-          "Indicá cuánto querés recibir."
-        ],
-        [
-          "Motor inverso",
-          "Búsqueda binaria con comisiones Clásica y Premium."
-        ],
-        [
-          "Costos",
-          "Considera escala de costos fijos y envíos."
-        ]
+        "Ingresá cuánto querés recibir neto",
+        "Calcula comisiones, escala fija y envíos",
+        "Obtené el precio exacto a publicar"
       ],
+      "domain": "dobre.nanilabs.lat",
       "logo": "dobre"
     },
     {
@@ -429,30 +277,28 @@
       "project": "freesoft",
       "name": "FreeSoft",
       "variant": 1,
-      "summary": "Suite libre y offline para Windows.",
-      "title": "Herramientas locales para Windows",
-      "items": [
-        [
-          "01",
-          "Aquamarine",
-          "Inventario, ventas y reparaciones locales."
-        ],
-        [
-          "02",
-          "OrganEyes",
-          "Organización automática de archivos por tipo."
-        ],
-        [
-          "03",
-          "Sin conexión",
-          "Software Windows offline, sin nube."
-        ],
-        [
-          "04",
-          "Código abierto",
-          "Sin publicidad ni suscripciones."
-        ]
+      "layout": "D",
+      "summary": "Aquamarine y OrganEyes en un solo flyer.",
+      "meta": "FreeSoft · Open Source",
+      "title": "FreeSoft",
+      "subtitle": "2 utilidades offline para Windows",
+      "split": [
+        {
+          "logo": "aquamarine",
+          "name": "Aquamarine",
+          "badge": "C++ · Qt · SQLite",
+          "desc": "Gestión local de inventario, ventas y reparaciones",
+          "sub": "100% Offline · Windows"
+        },
+        {
+          "logo": "organeyes",
+          "name": "OrganEyes",
+          "badge": "Python · PyQt",
+          "desc": "Organizador automático de archivos por extensión",
+          "sub": "Limpia Descargas, Escritorio y carpetas"
+        }
       ],
+      "domain": "github.com/NaniLabs/FreeSoft",
       "logo": "aquamarine"
     },
     {
@@ -460,33 +306,16 @@
       "project": "freesoft",
       "name": "FreeSoft",
       "variant": 2,
-      "summary": "Aquamarine y OrganEyes: software libre offline para Windows.",
+      "layout": "B",
+      "summary": "Ficha técnica de Aquamarine y OrganEyes.",
+      "meta": "Rama Open Source",
+      "subtitle": "Aquamarine y OrganEyes en Windows",
       "rows": [
-        [
-          "Plataforma",
-          "Windows · 100% offline"
-        ],
-        [
-          "Aquamarine",
-          "Inventario, ventas y reparaciones"
-        ],
-        [
-          "Tecnología",
-          "C++ · Qt · SQLite"
-        ],
-        [
-          "OrganEyes",
-          "Organización automática de archivos"
-        ],
-        [
-          "Tecnología",
-          "Python · PyQt"
-        ],
-        [
-          "Modelo",
-          "Open Source · sin suscripciones"
-        ]
+        ["Aquamarine", "Stock, ventas y taller (C++ · Qt)"],
+        ["OrganEyes", "Orden de archivos (Python · PyQt)"],
+        ["Ejecución", "100% Offline · Sin conexión ni nube"]
       ],
+      "domain": "github.com/NaniLabs/FreeSoft",
       "logo": "aquamarine"
     },
     {
@@ -494,22 +323,16 @@
       "project": "freesoft",
       "name": "FreeSoft",
       "variant": 3,
-      "summary": "Dos aplicaciones libres para trabajar y organizar archivos.",
-      "title": "Una suite. Dos herramientas.",
+      "layout": "C",
+      "summary": "Software libre de escritorio para Windows.",
+      "meta": "100% Offline",
+      "statement": "Software libre de escritorio para Windows",
       "modules": [
-        [
-          "Aquamarine",
-          "Inventario, ventas y reparaciones con C++ · Qt · SQLite."
-        ],
-        [
-          "OrganEyes",
-          "Orden automático de archivos con Python · PyQt."
-        ],
-        [
-          "Software libre",
-          "Windows offline, sin nube, publicidad ni suscripciones."
-        ]
+        "Aquamarine: inventario, ventas y reparaciones",
+        "OrganEyes: clasificación automática de archivos",
+        "Código abierto en GitHub, sin suscripciones"
       ],
+      "domain": "github.com/NaniLabs/FreeSoft",
       "logo": "organeyes"
     }
   ]
