@@ -15,7 +15,7 @@
       "domain": "doublelink.nanilabs.lat",
       "url": "https://doublelink.nanilabs.lat",
       "description": "Control remoto y companion bidireccional entre Android y Windows en red local, sin nube.",
-      "status": "Beta 3.6.0",
+      "status": "Beta 3.6.1",
       "technologies": ["Flutter", "Dart", "Kotlin", "Win32"]
     },
     {
