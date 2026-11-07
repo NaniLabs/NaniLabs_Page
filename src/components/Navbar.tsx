@@ -1,206 +1,64 @@
-import { Menu, X, ExternalLink } from 'lucide-react'
-import { useState, useEffect } from 'react'
-import { cn } from '@/utils/cn'
-import { site } from '@/utils/content'
+import { useState } from 'react'
+import { Menu, X } from 'lucide-react'
+import { NaniLabsMark } from '@/components/icons'
 
-function NaniLabsMark({ className }: { className?: string }) {
-  return (
-    <svg className={className} viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <defs>
-        <linearGradient id="nl-right-grad" x1="74" y1="16" x2="74" y2="70" gradientUnits="userSpaceOnUse">
-          <stop offset="0%" stopColor="#29b6f6" />
-          <stop offset="55%" stopColor="#4f7df9" />
-          <stop offset="100%" stopColor="#6366f1" />
-        </linearGradient>
-        <linearGradient id="nl-diag-grad" x1="20" y1="16" x2="80" y2="84" gradientUnits="userSpaceOnUse">
-          <stop offset="0%" stopColor="#ffffff" />
-          <stop offset="70%" stopColor="#f4f4f5" />
-          <stop offset="100%" stopColor="#e0e7ff" />
-        </linearGradient>
-      </defs>
-      <path
-        d="M16 42C16 39.8 17.8 38 20 38H22.5C23.8 38 25 38.6 25.8 39.6L34.8 52.2C35.6 53.3 36 54.6 36 56V80C36 82.2 34.2 84 32 84H20C17.8 84 16 82.2 16 80V42Z"
-        fill="#fafafa"
-      />
-      <path
-        d="M18.5 16H34.5C36.4 16 38.2 16.9 39.3 18.4L83.2 79.2C84.7 81.2 83.2 84 80.8 84H65.5C63.6 84 61.8 83.1 60.7 81.6L16.8 20.8C15.3 18.8 16.8 16 19.2 16H18.5Z"
-        fill="url(#nl-diag-grad)"
-      />
-      <path
-        d="M64 20C64 17.8 65.8 16 68 16H80C82.2 16 84 17.8 84 20V66.5C84 68.2 81.9 69 80.9 67.6L64.8 45.2C64.3 44.5 64 43.6 64 42.7V20Z"
-        fill="url(#nl-right-grad)"
-      />
-    </svg>
-  )
-}
-
-function GithubIcon({ className }: { className?: string }) {
-  return (
-    <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-      <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
-    </svg>
-  )
-}
-
-function InstagramIcon({ className }: { className?: string }) {
-  return (
-    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
-    </svg>
-  )
-}
-
-const navItems = [
+const links = [
   { id: 'proyectos', label: 'Ecosistema' },
-  { id: 'sobre', label: 'Laboratorio' },
+  { id: 'sobre', label: 'Arquitectura' },
   { id: 'tecnologias', label: 'Stack' },
   { id: 'contacto', label: 'Contacto' },
-] as const
+]
 
 export function Navbar() {
   const [open, setOpen] = useState(false)
-  const [scrolled, setScrolled] = useState(false)
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20)
-    onScroll()
-    window.addEventListener('scroll', onScroll, { passive: true })
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [])
 
   return (
-    <header
-      className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
-        scrolled
-          ? 'bg-[var(--color-bg)]/90 backdrop-blur-xl border-b border-[var(--color-border)] shadow-lg'
-          : 'bg-[var(--color-bg)]/40 backdrop-blur-md border-b border-white/5'
-      )}
-      role="banner"
-    >
-      <nav className="container" aria-label="Navegación principal">
-        <div className="flex items-center justify-between h-16">
-          
-          {/* Brand mark and title */}
-          <div className="flex items-center gap-3">
-            <a
-              href="/"
-              className="flex items-center gap-2.5 font-display text-lg font-semibold tracking-tight text-[var(--color-text)] focus-ring-visible rounded-md px-1 py-1 -ml-1 group"
-              aria-label={`${site.name} - Inicio`}
-            >
-              <div className="h-8 w-8 rounded-lg bg-[#0d0f14] border border-[var(--color-border)] flex items-center justify-center group-hover:border-[var(--color-border-hover)] transition-colors">
-                <NaniLabsMark className="h-5 w-5" />
-              </div>
-              <span>NaniLabs</span>
+    <header className="site-header">
+      <a className="skip-link" href="#main-content">
+        Saltar al contenido principal
+      </a>
+      <nav className="container nav" aria-label="Navegación principal">
+        <a className="brand-link" href="/">
+          <NaniLabsMark className="brand-mark" />
+          <span>
+            NaniLabs
+            <small>nanilabs.lat</small>
+          </span>
+        </a>
+        <div className="desktop-nav">
+          {links.map((link) => (
+            <a key={link.id} href={`/#${link.id}`}>
+              {link.label}
             </a>
-          </div>
-
-          {/* Desktop Navigation Links */}
-          <div className="hidden md:flex items-center gap-6">
-            {navItems.map((item) => (
+          ))}
+        </div>
+        <div className="desktop-nav nav-direct">
+          <a href="https://ceo.nanilabs.lat">ceo.nanilabs.lat ↗</a>
+          <a href="https://saas.nanilabs.lat">saas.nanilabs.lat ↗</a>
+        </div>
+        <button
+          className="menu-button"
+          type="button"
+          onClick={() => setOpen(!open)}
+          aria-label={open ? 'Cerrar menú' : 'Abrir menú'}
+          aria-expanded={open}
+          aria-controls="mobile-menu"
+        >
+          {open ? <X /> : <Menu />}
+        </button>
+        {open && (
+          <div id="mobile-menu" className="mobile-nav">
+            {links.map((link) => (
               <a
-                key={item.id}
-                href={`#${item.id}`}
-                className="text-xs font-mono uppercase tracking-wider text-[var(--color-text-muted)] transition-colors hover:text-[var(--color-text)] px-2 py-1"
+                key={link.id}
+                href={`/#${link.id}`}
+                onClick={() => setOpen(false)}
               >
-                {item.label}
+                {link.label}
               </a>
             ))}
-          </div>
-
-          {/* Right Action Buttons */}
-          <div className="hidden md:flex items-center gap-2.5">
-            <a
-              href="https://ceo.nanilabs.lat"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-xs font-mono px-3 py-1.5 rounded-lg border border-[var(--color-border)] bg-[var(--color-bg-elevated)] text-[var(--color-text)] hover:border-[var(--color-accent)]/50 transition-colors"
-            >
-              <span>Perfil &amp; CV</span>
-              <ExternalLink className="h-3 w-3 text-[var(--color-accent)]" />
-            </a>
-
-            <a
-              href="https://saas.nanilabs.lat"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-xs font-mono px-3 py-1.5 rounded-lg border border-[var(--color-accent)]/30 bg-[var(--color-accent)]/10 text-[var(--color-accent)] hover:bg-[var(--color-accent)]/20 transition-colors"
-            >
-              <span>NaniLabs SaaS</span>
-              <ExternalLink className="h-3 w-3" />
-            </a>
-
-            <div className="h-4 w-px bg-[var(--color-border)] mx-1" />
-
-            <a
-              href={site.social.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[var(--color-text-muted)] hover:text-[var(--color-accent)] transition-colors p-1.5 rounded-full"
-              aria-label="GitHub"
-            >
-              <GithubIcon className="h-4 w-4" />
-            </a>
-            <a
-              href={site.social.instagram}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[var(--color-text-muted)] hover:text-[var(--color-accent)] transition-colors p-1.5 rounded-full"
-              aria-label="Instagram"
-            >
-              <InstagramIcon className="h-4 w-4" />
-            </a>
-          </div>
-
-          {/* Mobile hamburger button */}
-          <button
-            type="button"
-            className="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--color-bg-card)] text-[var(--color-text)] border border-[var(--color-border)] focus-ring-visible"
-            onClick={() => setOpen(!open)}
-            aria-label={open ? 'Cerrar menú' : 'Abrir menú'}
-            aria-expanded={open}
-            aria-controls="mobile-menu"
-          >
-            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-          </button>
-        </div>
-
-        {/* Mobile menu dropdown */}
-        {open && (
-          <div id="mobile-menu" className="md:hidden py-4 border-t border-[var(--color-border)] bg-[var(--color-bg)]">
-            <div className="flex flex-col gap-3 font-mono text-sm">
-              {navItems.map((item) => (
-                <a
-                  key={item.id}
-                  href={`#${item.id}`}
-                  onClick={() => setOpen(false)}
-                  className="text-[var(--color-text-muted)] hover:text-white py-1.5"
-                >
-                  {item.label}
-                </a>
-              ))}
-              <div className="pt-2 border-t border-[var(--color-border)] flex items-center justify-between">
-                <a
-                  href="https://saas.nanilabs.lat"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xs text-[var(--color-accent)] flex items-center gap-1"
-                >
-                  <span>Abrir NaniLabs SaaS</span>
-                  <ExternalLink className="h-3 w-3" />
-                </a>
-                <div className="flex items-center gap-3">
-                  <a href={site.social.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                    <GithubIcon className="h-4 w-4 text-[var(--color-text-muted)]" />
-                  </a>
-                  <a href={site.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                    <InstagramIcon className="h-4 w-4 text-[var(--color-text-muted)]" />
-                  </a>
-                </div>
-              </div>
-            </div>
+            <a href="https://ceo.nanilabs.lat">ceo.nanilabs.lat ↗</a>
+            <a href="https://saas.nanilabs.lat">saas.nanilabs.lat ↗</a>
           </div>
         )}
       </nav>

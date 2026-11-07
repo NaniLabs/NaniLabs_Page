@@ -1,41 +1,62 @@
 import { getAllProjects } from '@/utils/content'
 
+const layers = [
+  {
+    name: 'Cloud & Serverless',
+    role: 'Infraestructura y datos',
+    tech: ['Cloudflare Workers', 'Cloudflare D1', 'Node.js', 'SQLite', 'Multi-tenant'],
+  },
+  {
+    name: 'Aplicaciones Nativas & Móvil',
+    role: 'Interfaces y herramientas locales',
+    tech: ['Flutter', 'Dart', 'Kotlin', 'Win32', 'C++', 'Qt', 'Python', 'Tkinter'],
+  },
+  {
+    name: 'Frontend & Sistemas Web',
+    role: 'Experiencias web y comercio',
+    tech: ['TypeScript', 'React', 'Tailwind CSS', 'Mercado Pago'],
+  },
+]
+
 export function TechStack() {
-  const projects = getAllProjects()
-
-  const allTechs = new Set<string>()
-  projects.forEach((p) => p.technologies.forEach((t) => allTechs.add(t)))
-
-  const sortedTechs = Array.from(allTechs).sort()
+  const available = new Set(
+    getAllProjects().flatMap((project) => project.technologies)
+  )
 
   return (
-    <section id="tecnologias" className="section bg-[var(--color-bg-elevated)]" aria-labelledby="tech-title">
+    <section id="tecnologias" className="section stack-section">
       <div className="container">
-        <header className="section-header mb-12 md:mb-16">
-          <span className="section-label">Tecnologías</span>
-          <h2 id="tech-title" className="section-title">
-            Lo que uso para construir
-          </h2>
-          <p className="section-description">
-            No hay stack obligatorio. Cada proyecto usa lo que mejor encaja.
-            Estas son las tecnologías presentes en los proyectos actuales.
+        <div className="section-heading">
+          <div>
+            <p className="eyebrow">03 / Tecnologías</p>
+            <h2>
+              Matriz de stack
+              <br />
+              por capa de ingeniería.
+            </h2>
+          </div>
+          <p>
+            Las tecnologías presentes en los proyectos actuales, agrupadas según su función.
           </p>
-        </header>
-
-        <div className="flex flex-wrap justify-center gap-2 md:gap-3 max-w-4xl mx-auto">
-          {sortedTechs.map((tech) => (
-            <span
-              key={tech}
-              className="tech-tag"
-            >
-              {tech}
-            </span>
+        </div>
+        <div className="stack-matrix">
+          {layers.map((layer, i) => (
+            <article key={layer.name}>
+              <span className="stack-index">0{i + 1}</span>
+              <div>
+                <h3>{layer.name}</h3>
+                <p>{layer.role}</p>
+              </div>
+              <div className="stack-items">
+                {layer.tech
+                  .filter((tech) => available.has(tech))
+                  .map((tech) => (
+                    <span key={tech}>{tech}</span>
+                  ))}
+              </div>
+            </article>
           ))}
         </div>
-
-        <p className="mt-8 text-center text-[var(--color-text-subtle)] text-sm">
-          La lista crece conforme aparecen nuevos proyectos.
-        </p>
       </div>
     </section>
   )

@@ -10,7 +10,7 @@ export function NotFound() {
   return (
     <>
       <Navbar />
-      <main className="flex-1 flex items-center justify-center min-h-[60vh] px-4">
+      <main id="main-content" className="flex-1 flex items-center justify-center min-h-[60vh] px-4">
         <div className="text-center max-w-md">
           <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-[var(--color-accent)]/10 text-[var(--color-accent)] mb-6 mx-auto">
             <Search className="h-10 w-10" aria-hidden="true" />
